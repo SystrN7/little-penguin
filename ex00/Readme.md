@@ -1,4 +1,3 @@
-Clone the Linux kernel source code from the official git repository.
 # Exercice 00
 
 Clone the Linux kernel source code from the official git repository.
@@ -48,9 +47,7 @@ Reboot the system.
 
 The kernel boot logs are available at :
  - /var/log/boot.log
- - /var/log/kern.log # missing on lfs
- - /var/log/syslog # missing on lfs
- - /var/log/dmesg # missing on lfs
+ - dmesg > kernel.log
 
 Warning: I don't update the installed kernel header on my system because i need to recompile the glibc and other packages to use the new kernel header. I prefer to use the kernel header form the previous install.
 
