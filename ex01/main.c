@@ -9,7 +9,11 @@ static int __init module_hello_start(void)
 }
 
 static void __exit module_hello_end(void)
-{}
+{
+    printk(KERN_INFO "Cleaning up module.\n");
+}
 
-module_init(hello_start);
-module_exit(hello_end);
+module_init(module_hello_start);
+module_exit(module_hello_end);
+
+MODULE_LICENSE("GPL");
