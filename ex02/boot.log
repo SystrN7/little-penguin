@@ -1,0 +1,323 @@
+Mar 14 15:22:50 +01:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 14 15:22:51 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 14 15:22:51 +01:00 (none)  Setting hostname to mhouppin... OK
+Mar 14 15:22:52 +01:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 14 15:22:57 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 14 15:22:58 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 14 15:22:58 +01:00 mhouppin  Checking file systems...Mar 14 15:22:58 +01:00 mhouppin  
+WARNING:
+
+File system errors were found and have been corrected.
+      You may want to double-check that everything was fixed properly. WARN
+Mar 14 15:22:59 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 14 15:22:59 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 14 15:22:59 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 14 15:23:00 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 14 15:23:01 +01:00 mhouppin  Setting up Linux console... OK
+Mar 14 15:23:02 +01:00 mhouppin  Starting system log daemon... OK
+Mar 14 15:23:03 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 14 15:23:05 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 14 15:23:05 +01:00 mhouppin  Adding IPv4 address 192.168.1.2 to the enp0s3 interface... OK
+Mar 14 15:23:06 +01:00 mhouppin  Adding default gateway 192.168.1.1 to the enp0s3 interface... OK
+--------
+Mar 14 15:30:09 +01:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 14 15:30:10 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 14 15:30:10 +01:00 (none)  Setting hostname to mhouppin... OK
+Mar 14 15:30:11 +01:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 14 15:30:15 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 14 15:30:16 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 14 15:30:16 +01:00 mhouppin  Checking file systems... OK
+Mar 14 15:30:16 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 14 15:30:17 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 14 15:30:17 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 14 15:30:18 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 14 15:30:19 +01:00 mhouppin  Setting up Linux console... OK
+Mar 14 15:30:20 +01:00 mhouppin  Starting system log daemon... OK
+Mar 14 15:30:21 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 14 15:30:23 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 14 15:30:23 +01:00 mhouppin  Adding IPv4 address 192.168.1.2 to the enp0s3 interface... OK
+Mar 14 15:30:24 +01:00 mhouppin  Adding default gateway 192.168.1.1 to the enp0s3 interface... OK
+--------
+Mar 14 16:13:57 +01:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 14 16:13:57 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 14 16:13:57 +01:00 (none)  Setting hostname to mhouppin... OK
+Mar 14 16:13:57 +01:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 14 16:13:54 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 14 16:13:54 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 14 16:13:54 +01:00 mhouppin  Checking file systems... OK
+Mar 14 16:13:54 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 14 16:13:54 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 14 16:13:54 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 14 16:13:54 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 14 16:13:55 +01:00 mhouppin  Setting up Linux console... OK
+Mar 14 16:13:55 +01:00 mhouppin  Starting system log daemon... OK
+Mar 14 16:13:55 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 14 16:13:55 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 14 16:13:56 +01:00 mhouppin  Adding IPv4 address 192.168.1.2 to the enp0s3 interface... OK
+Mar 14 16:13:56 +01:00 mhouppin  Adding default gateway 192.168.1.1 to the enp0s3 interface... OK
+--------
+Mar 14 16:18:18 +01:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 14 16:18:18 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 14 16:18:18 +01:00 (none)  Setting hostname to mhouppin... OK
+Mar 14 16:18:19 +01:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 14 16:16:05 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 14 16:16:05 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 14 16:16:05 +01:00 mhouppin  Checking file systems... OK
+Mar 14 16:16:05 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 14 16:16:05 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 14 16:16:05 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 14 16:16:05 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 14 16:16:06 +01:00 mhouppin  Setting up Linux console... OK
+Mar 14 16:16:06 +01:00 mhouppin  Starting system log daemon... OK
+Mar 14 16:16:06 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 14 16:16:06 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 14 16:16:06 +01:00 mhouppin  Adding IPv4 address 192.168.1.2 to the enp0s3 interface... OK
+Mar 14 16:16:07 +01:00 mhouppin  Adding default gateway 192.168.1.1 to the enp0s3 interface... OK
+--------
+Mar 14 16:21:33 +01:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 14 16:21:34 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 14 16:21:34 +01:00 (none)  Setting hostname to mhouppin... OK
+Mar 14 16:21:34 +01:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 14 16:17:43 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 14 16:17:43 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 14 16:17:43 +01:00 mhouppin  Checking file systems... OK
+Mar 14 16:17:43 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 14 16:17:43 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 14 16:17:43 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 14 16:17:43 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 14 16:17:44 +01:00 mhouppin  Setting up Linux console... OK
+Mar 14 16:17:44 +01:00 mhouppin  Starting system log daemon... OK
+Mar 14 16:17:44 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 14 16:17:44 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 14 16:17:44 +01:00 mhouppin  Adding IPv4 address 10.0.2.16 to the enp0s3 interface... OK
+Mar 14 16:17:44 +01:00 mhouppin  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+--------
+Mar 14 16:34:28 +01:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 14 16:34:28 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 14 16:34:28 +01:00 (none)  Setting hostname to mhouppin... OK
+Mar 14 16:34:28 +01:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 14 16:34:40 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 14 16:34:40 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 14 16:34:40 +01:00 mhouppin  Checking file systems... OK
+Mar 14 16:34:40 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 14 16:34:40 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 14 16:34:40 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 14 16:34:40 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 14 16:24:20 +01:00 mhouppin  Setting up Linux console... OK
+Mar 14 16:24:20 +01:00 mhouppin  Starting system log daemon... OK
+Mar 14 16:24:20 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 14 16:24:20 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 14 16:24:20 +01:00 mhouppin  Adding IPv4 address 10.0.2.16 to the enp0s3 interface... OK
+Mar 14 16:24:20 +01:00 mhouppin  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+--------
+Mar 14 17:48:25 +01:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 14 17:48:25 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 14 17:48:25 +01:00 (none)  Setting hostname to mhouppin... OK
+Mar 14 17:48:25 +01:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 14 17:45:39 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 14 17:45:39 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 14 17:45:39 +01:00 mhouppin  Checking file systems...Mar 14 17:45:39 +01:00 mhouppin  
+WARNING:
+
+File system errors were found and have been corrected.
+      You may want to double-check that everything was fixed properly. WARN
+Mar 14 17:45:39 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 14 17:45:39 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 14 17:45:39 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 14 17:45:39 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 14 17:45:40 +01:00 mhouppin  Setting up Linux console... OK
+Mar 14 17:45:40 +01:00 mhouppin  Starting system log daemon... OK
+Mar 14 17:45:40 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 14 17:45:40 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 14 17:45:41 +01:00 mhouppin  Adding IPv4 address 10.0.2.16 to the enp0s3 interface... OK
+Mar 14 17:45:41 +01:00 mhouppin  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+--------
+Mar 20 15:34:25 +01:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 20 15:34:25 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 20 15:34:25 +01:00 (none)  Setting hostname to mhouppin... OK
+Mar 20 15:34:25 +01:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 20 15:34:22 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 20 15:34:22 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 20 15:34:22 +01:00 mhouppin  Checking file systems...Mar 20 15:34:22 +01:00 mhouppin  
+WARNING:
+
+File system errors were found and have been corrected.
+      You may want to double-check that everything was fixed properly. WARN
+Mar 20 15:34:22 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 20 15:34:22 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 20 15:34:22 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 20 15:34:22 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 20 15:34:23 +01:00 mhouppin  Setting up Linux console... OK
+Mar 20 15:34:23 +01:00 mhouppin  Starting system log daemon... OK
+Mar 20 15:34:23 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 20 15:34:23 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 20 15:34:24 +01:00 mhouppin  Adding IPv4 address 10.0.2.16 to the enp0s3 interface... OK
+Mar 20 15:34:24 +01:00 mhouppin  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+--------
+Mar 20 16:09:09 +01:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 20 16:09:09 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 20 16:09:09 +01:00 (none)  Setting hostname to mhouppin... OK
+Mar 20 16:09:09 +01:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 20 15:51:44 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 20 15:51:44 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 20 15:51:44 +01:00 mhouppin  Checking file systems... OK
+Mar 20 15:51:44 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 20 15:51:44 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 20 15:51:44 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 20 15:51:44 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 20 15:51:45 +01:00 mhouppin  Setting up Linux console... OK
+Mar 20 15:51:45 +01:00 mhouppin  Starting system log daemon... OK
+Mar 20 15:51:45 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 20 15:51:45 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 20 15:51:46 +01:00 mhouppin  Adding IPv4 address 10.0.2.16 to the enp0s3 interface... OK
+Mar 20 15:51:46 +01:00 mhouppin  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+Mar 20 15:51:46 +01:00 mhouppin  Starting SSH Server... OK
+--------
+Mar 21 10:04:41 +01:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 21 10:04:41 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 21 10:04:41 +01:00 (none)  Setting hostname to mhouppin... OK
+Mar 21 10:04:41 +01:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 21 10:04:34 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 21 10:04:34 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 21 10:04:34 +01:00 mhouppin  Checking file systems...Mar 21 10:04:34 +01:00 mhouppin  
+WARNING:
+
+File system errors were found and have been corrected.
+      You may want to double-check that everything was fixed properly. WARN
+Mar 21 10:04:34 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 21 10:04:34 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 21 10:04:34 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 21 10:04:34 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 21 10:04:35 +01:00 mhouppin  Setting up Linux console... OK
+Mar 21 10:04:35 +01:00 mhouppin  Starting system log daemon... OK
+Mar 21 10:04:35 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 21 10:04:35 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 21 10:04:35 +01:00 mhouppin  Adding IPv4 address 10.0.2.16 to the enp0s3 interface... OK
+Mar 21 10:04:35 +01:00 mhouppin  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+Mar 21 10:04:35 +01:00 mhouppin  Starting SSH Server... OK
+--------
+Mar 21 21:17:39 +01:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 21 21:17:39 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 21 21:17:39 +01:00 (none)  Setting hostname to mhouppin... OK
+Mar 21 21:17:39 +01:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 21 15:41:01 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 21 15:41:01 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 21 15:41:01 +01:00 mhouppin  Checking file systems... OK
+Mar 21 15:41:01 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 21 15:41:01 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 21 15:41:01 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 21 15:41:01 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 21 15:41:02 +01:00 mhouppin  Setting up Linux console... OK
+Mar 21 15:41:02 +01:00 mhouppin  Starting system log daemon... OK
+Mar 21 15:41:02 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 21 15:41:02 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 21 15:41:02 +01:00 mhouppin  Adding IPv4 address 10.0.2.16 to the enp0s3 interface... OK
+Mar 21 15:41:02 +01:00 mhouppin  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+Mar 21 15:41:02 +01:00 mhouppin  Starting SSH Server... OK
+--------
+Mar 22 20:46:59 +01:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 22 20:46:59 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 22 20:46:59 +01:00 (none)  Setting hostname to mhouppin... OK
+Mar 22 20:46:59 +01:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 22 20:46:53 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 22 20:46:53 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 22 20:46:53 +01:00 mhouppin  Checking file systems... OK
+Mar 22 20:46:53 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 22 20:46:53 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 22 20:46:53 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 22 20:46:53 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 22 20:46:54 +01:00 mhouppin  Setting up Linux console... OK
+Mar 22 20:46:54 +01:00 mhouppin  Starting system log daemon... OK
+Mar 22 20:46:54 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 22 20:46:54 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 22 20:46:54 +01:00 mhouppin  Adding IPv4 address 10.0.2.16 to the enp0s3 interface... OK
+Mar 22 20:46:54 +01:00 mhouppin  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+Mar 22 20:46:54 +01:00 mhouppin  Starting SSH Server... OK
+--------
+Mar 22 21:49:21 +01:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 22 21:49:21 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 22 21:49:21 +01:00 (none)  Setting hostname to mhouppin... OK
+Mar 22 21:49:22 +01:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 22 21:18:03 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 22 21:18:03 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 22 21:18:03 +01:00 mhouppin  Checking file systems... OK
+Mar 22 21:18:03 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 22 21:18:03 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 22 21:18:03 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 22 21:18:03 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 22 21:18:04 +01:00 mhouppin   FAIL
+Mar 22 21:18:04 +01:00 mhouppin  FAILURE:
+
+You should not be reading this error message.
+
+It means that an unforeseen error took place in
+/etc/rc.d/rcS.d/S70console,
+which exited with a return value of 2.
+If you're able to track this error down to a bug in one of
+the files provided by the LFS book,
+please be so kind to inform us at lfs-dev@lists.linuxfromscratch.org (Registration required).
+ FAIL
+Mar 22 21:18:04 +01:00 mhouppin  Press Enter to continue...Mar 22 21:18:25 +01:00 mhouppin  Starting system log daemon... OK
+Mar 22 21:18:25 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 22 21:18:25 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 22 21:18:25 +01:00 mhouppin  Adding IPv4 address 10.0.2.16 to the enp0s3 interface... OK
+Mar 22 21:18:25 +01:00 mhouppin  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+Mar 22 21:18:25 +01:00 mhouppin  Starting SSH Server... OK
+--------
+Mar 22 22:07:50 +01:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 22 22:07:50 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 22 22:07:50 +01:00 (none)  Setting hostname to mhouppin... OK
+Mar 22 22:07:50 +01:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 22 21:27:17 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 22 21:27:17 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 22 21:27:17 +01:00 mhouppin  Checking file systems... OK
+Mar 22 21:27:17 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 22 21:27:17 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 22 21:27:17 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 22 21:27:17 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 22 21:27:18 +01:00 mhouppin  Setting up Linux console... OK
+Mar 22 21:27:18 +01:00 mhouppin  Starting system log daemon... OK
+Mar 22 21:27:18 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 22 21:27:18 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 22 21:27:18 +01:00 mhouppin  Adding IPv4 address 10.0.2.16 to the enp0s3 interface... OK
+Mar 22 21:27:18 +01:00 mhouppin  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+Mar 22 21:27:18 +01:00 mhouppin  Starting SSH Server... OK
+--------
+Mar 22 23:45:39 +01:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 22 23:45:39 +01:00 (none)  Bringing up the loopback interface... OK
+Mar 22 23:45:40 +01:00 (none)  Setting hostname to mhouppin... OK
+Mar 22 23:45:40 +01:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 22 22:16:12 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 22 22:16:12 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 22 22:16:12 +01:00 mhouppin  Checking file systems... OK
+Mar 22 22:16:12 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 22 22:16:12 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 22 22:16:12 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 22 22:16:12 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 22 22:16:13 +01:00 mhouppin  Setting up Linux console... OK
+Mar 22 22:16:13 +01:00 mhouppin  Starting system log daemon... OK
+Mar 22 22:16:13 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 22 22:16:13 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 22 22:16:13 +01:00 mhouppin  Adding IPv4 address 10.0.2.16 to the enp0s3 interface... OK
+Mar 22 22:16:13 +01:00 mhouppin  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+Mar 22 22:16:13 +01:00 mhouppin  Starting SSH Server... OK
+--------
+Mar 26 19:40:57 +02:00 (none)  Mounting virtual file systems: /run /proc /sys OK
+Mar 26 19:40:57 +02:00 (none)  Bringing up the loopback interface... OK
+Mar 26 19:40:57 +02:00 (none)  Setting hostname to mhouppin... OK
+Mar 26 19:40:57 +02:00 mhouppin  Populating /dev with device nodes...  OK
+Mar 23 01:40:17 +01:00 mhouppin  Activating all swap files/partitions... OK
+Mar 23 01:40:17 +01:00 mhouppin  Mounting root file system in read-only mode...  OK
+Mar 23 01:40:17 +01:00 mhouppin  Checking file systems... OK
+Mar 23 01:40:17 +01:00 mhouppin  Remounting root file system in read-write mode... OK
+Mar 23 01:40:17 +01:00 mhouppin  Mounting remaining file systems... OK
+Mar 23 01:40:17 +01:00 mhouppin  Cleaning file systems: /tmp OK
+Mar 23 01:40:17 +01:00 mhouppin  Retrying failed uevents, if any... OK
+Mar 23 01:40:18 +01:00 mhouppin  Setting up Linux console... OK
+Mar 23 01:40:18 +01:00 mhouppin  Starting system log daemon... OK
+Mar 23 01:40:18 +01:00 mhouppin  Starting kernel log daemon... OK
+Mar 23 01:40:18 +01:00 mhouppin  Bringing up the enp0s3 interface... OK
+Mar 23 01:40:18 +01:00 mhouppin  Adding IPv4 address 10.0.2.16 to the enp0s3 interface... OK
+Mar 23 01:40:18 +01:00 mhouppin  Adding default gateway 10.0.2.2 to the enp0s3 interface... OK
+Mar 23 01:40:18 +01:00 mhouppin  Starting SSH Server... OK
+--------

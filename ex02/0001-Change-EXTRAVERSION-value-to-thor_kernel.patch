@@ -1,0 +1,25 @@
+From 5b94c78c9255a38b24761a69be1c8563811f284b Mon Sep 17 00:00:00 2001
+From: SystrN7 <felixgalaup@yahoo.fr>
+Date: Thu, 23 Mar 2023 05:28:25 +0100
+Subject: [PATCH] Change EXTRAVERSION value to thor_kernel
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index a2c310df2145..b32c1abf1c88 100644
+--- a/Makefile
++++ b/Makefile
+@@ -2,7 +2,7 @@
+ VERSION = 6
+ PATCHLEVEL = 3
+ SUBLEVEL = 0
+-EXTRAVERSION = -rc3
++EXTRAVERSION = -thor_kernel
+ NAME = Hurr durr I'ma ninja sloth
+ 
+ # *DOCUMENTATION*
+-- 
+2.37.2
+
