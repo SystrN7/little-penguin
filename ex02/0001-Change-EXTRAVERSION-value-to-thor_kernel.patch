@@ -10,8 +10,6 @@ The Subject of 42 school require to add thor_kernel in kernerl version
 string and create a linux patch with a valid format.
 
 Signed-off-by: fgalaup <fgalaup@student.42lyon.fr>
-
-
 ---
  Makefile | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
