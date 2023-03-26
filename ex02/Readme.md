@@ -16,6 +16,9 @@ Create a patch from the commit and send it to the mailing list.
 
 A new directory `outgoing` is created and the patch is inside it.
 
+To test if the patch is correct:
+`./scripts/checkpatch.pl ./0001-change-EXTRAVERSION-to-thor_kernel.patch`
+
 
 ## Sources
 <!-- https://docs.kernel.org/kbuild/makefiles.html#kbuild-variables -->
