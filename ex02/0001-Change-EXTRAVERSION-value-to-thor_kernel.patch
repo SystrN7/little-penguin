@@ -1,7 +1,16 @@
 From 5b94c78c9255a38b24761a69be1c8563811f284b Mon Sep 17 00:00:00 2001
-From: SystrN7 <felixgalaup@yahoo.fr>
+From: fgalaup <fgalaup@student.42lyon.fr>
 Date: Thu, 23 Mar 2023 05:28:25 +0100
 Subject: [PATCH] Change EXTRAVERSION value to thor_kernel
+
+Change EXTRAVERSION value to thor_kernel to by compliant with Subject of 
+42 school.
+
+The Subject of 42 school require to add thor_kernel in kernerl version 
+string and create a linux patch with a valid format.
+
+Signed-off-by: fgalaup <fgalaup@student.42lyon.fr>
+
 
 ---
  Makefile | 2 +-
