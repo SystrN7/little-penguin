@@ -27,7 +27,7 @@ MODULE_DEVICE_TABLE (usb, usb_id_table);
 static int usb_keyboard_probe(struct usb_interface *interface,
                         const struct usb_device_id *id)
 {
-    pr_info("USB Driver is inserted\n");
+    pr_info("USB Keybord Driver - is inserted\n");
     return 0;
 }
 
@@ -36,7 +36,7 @@ static int usb_keyboard_probe(struct usb_interface *interface,
 */
 static void usb_keyboard_disconnect(struct usb_interface *interface)
 {
-    pr_info("USB Driver Disconnected\n");
+    pr_info("USB Keybord Driver - Disconnected\n");
 }
 
 
@@ -49,13 +49,13 @@ static struct usb_driver usb_keyboard_driver = {
 
 static int __init module_usb_keyword_start(void)
 {
-    printk(KERN_INFO "Init module\n");
+    printk(KERN_INFO "USB Keybord Driver - Init module\n");
     return usb_register(&usb_keyboard_driver);
 }
 
 static void __exit module_usb_keyword_end(void)
 {
-    printk(KERN_INFO "Cleaning up module.\n");
+    printk(KERN_INFO "USB Keybord Driver - Cleaning up module.\n");
     usb_deregister(&usb_keyboard_driver);
 }
 

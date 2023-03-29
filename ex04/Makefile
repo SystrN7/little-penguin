@@ -6,11 +6,16 @@ all:
 clean:
 	make -C /lib/modules/$(KVERSION)/build M=$(PWD) clean
 
+modules_install:
+	make -C /lib/modules/$(KVERSION)/build M=$(PWD) modules_install
 
-install:
+modules_uninstall:
+	make -C /lib/modules/$(KVERSION)/build M=$(PWD) modules_uninstall
+
+load:
 	insmod main.ko
 	dmesg | tail -1
 
-uninstall:
+unload:
 	rmmod main.ko
 	dmesg | tail -1

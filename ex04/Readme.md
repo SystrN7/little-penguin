@@ -12,4 +12,5 @@ I found a solution on superuser.
  - [Linux Device Drivers - 3rd Edition - Chapter 14](https://static.lwn.net/images/pdf/LDD3/ch14.pdf)
  - [Creating small usb devices drivers](https://embetronicx.com/tutorials/linux/device-drivers/usb-device-driver-example/)
  - [To find how to select the usb keyboard](https://stackoverflow.com/questions/23307579/loading-module-on-keyboard-hotplug)
+ - [Install module](https://docs.kernel.org/kbuild/modules.html)
  - [Add usb keyboard to virtual machine](https://superuser.com/questions/144968/dedicated-mouse-and-keyboard-on-virtualbox-vm)
