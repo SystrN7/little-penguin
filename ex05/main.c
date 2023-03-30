@@ -29,7 +29,10 @@ static ssize_t fortytwo_write(struct file *file, const char __user *buffer,
     }
 
     if (copy_from_user(write_buffer, buffer, BUFFER_SIZE))
+    {
         pr_err("Error while copying from user space.\n");
+        return (-EFAULT);
+    }
     pr_info("fortytwo misc device write\n");
 
     if (memcmp(write_buffer, STUDENT_LOGIN, STUDENT_LOGIN_LENGTH))
@@ -49,7 +52,10 @@ static ssize_t fortytwo_read(struct file *filp, char __user *buffer,
     size_t length = (count < STUDENT_LOGIN_LENGTH) ? count : STUDENT_LOGIN_LENGTH;
 
     if (copy_to_user(buffer, STUDENT_LOGIN, length))
+    {
         pr_err("Error while copying to user space.\n");
+        return (-EFAULT);
+    }
     pr_info("fortytwo misc device read\n");
     return length;
 }
