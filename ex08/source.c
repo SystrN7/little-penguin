@@ -6,7 +6,7 @@
 #include <linux/fs.h>
 #include <linux/slab.h>
 
-MODULE_LICENSE("GNU");
+MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Louis Solofrizzo <louis@ne02ptzero.me>");
 MODULE_DESCRIPTION("Useless module");
 
@@ -45,13 +45,17 @@ ssize_t myfd_write(struct file *fp, const char __user *user, size_t size,
 	return result + 1;
 }
 
-static struct file_operations myfd_fops = { .owner = THIS_MODULE,
-					    .read = &myfd_read,
-					    .write = &myfd_write };
+const static struct file_operations myfd_fops = {
+	.owner = THIS_MODULE,
+	.read = &myfd_read,
+	.write = &myfd_write
+};
 
-static struct miscdevice myfd_device = { .minor = MISC_DYNAMIC_MINOR,
-					 .name = "reverse",
-					 .fops = &myfd_fops };
+static struct miscdevice myfd_device = {
+	.minor = MISC_DYNAMIC_MINOR,
+	.name = "reverse",
+	.fops = &myfd_fops 
+};
 
 static int __init myfd_init(void)
 {
