@@ -1,5 +1,10 @@
-obj-m = main.o
-KVERSION = $(shell uname -r)
+NAME = main
+
+obj-m = $(NAME).o
+
+ifeq ($(KVERSION),)
+	KVERSION = $(shell uname -r)
+endif
 
 all:
 	make -C /lib/modules/$(KVERSION)/build M=$(PWD) modules
@@ -13,9 +18,9 @@ modules_uninstall:
 	make -C /lib/modules/$(KVERSION)/build M=$(PWD) modules_uninstall
 
 load:
-	insmod main.ko
+	insmod $(NAME).ko
 	dmesg | tail -1
 
 unload:
-	rmmod main.ko
+	rmmod $(NAME).ko
 	dmesg | tail -1
