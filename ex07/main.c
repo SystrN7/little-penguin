@@ -63,7 +63,11 @@ static ssize_t jiffies_read(struct file *filp, char __user *buffer,
                     size_t count, loff_t *f_pos)
 {
     long unsigned int jiffies_value = jiffies;
-        if (copy_to_user(buffer, &jiffies_value, sizeof(jiffies_value)))
+
+    if (count < sizeof(jiffies_value))
+        return -EINVAL;
+        
+    if (copy_to_user(buffer, &jiffies_value, sizeof(jiffies_value)))
         pr_err("Error while copying to user space.\n");
     return sizeof(jiffies);
 }
@@ -134,7 +138,7 @@ static int __init module_debugfs_start(void)
     jiffies_file = debugfs_create_file("jiffies", 0444, fortytwo_directory, NULL, &jiffies_fops);
     if (jiffies_file == ERR_PTR(-ENOMEM))
         goto error;
-    foo_file = debugfs_create_file("foo", 0200, fortytwo_directory, NULL, &foo_fops);
+    foo_file = debugfs_create_file("foo", 0644, fortytwo_directory, NULL, &foo_fops);
     if (foo_file == ERR_PTR(-ENOMEM))
         goto error;
 
