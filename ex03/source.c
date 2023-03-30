@@ -1,37 +1,31 @@
 // SPDX-License-Identifier: GPL-2.0-only
-/*
- *  linux/init/main.c
- *
- *  Copyright (C) 2023, 2023  fgalaup
- */
 
 #include <linux/module.h>
 #include <linux/kernel.h>
 #include <linux/delay.h>
 #include <linux/slab.h>
 
-int do_work(int *my_int, int retval)
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Louis Solofrizzo <louis@ne02ptzero.me>");
+MODULE_DESCRIPTION("Useless module");
+
+int do_work(int my_int)
 {
 	int x;
-	int y = *my_int;
-	int z;
 
 	for (x = 0; x < my_int; ++x)
 		udelay(10);
 
-	if (y < 10)
+	if (my_int < 10)
 		/* That was a long sleep, tell userspace about it */
 		pr_info("We slept a long time!");
-	z = x * y;
-	return z;
+
+	return (x * my_int);
 }
 
 int my_init(void)
 {
-	int x = 10;
-
-	x = do_work(&x, x);
-	return x;
+	return do_work(10);
 }
 
 void my_exit(void)
