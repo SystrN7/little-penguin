@@ -6,7 +6,7 @@ Subject: [PATCH] Change EXTRAVERSION value to thor_kernel
 Change EXTRAVERSION value to thor_kernel to by compliant with Subject of 
 42 school.
 
-The Subject of 42 school require to add thor_kernel in kernerl version 
+The Subject of 42 school require to add thor_kernel in kernel version 
 string and create a linux patch with a valid format.
 
 Signed-off-by: fgalaup <fgalaup@student.42lyon.fr>
