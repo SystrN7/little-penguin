@@ -45,7 +45,7 @@ ssize_t myfd_write(struct file *fp, const char __user *user, size_t size,
 	return result + 1;
 }
 
-const static struct file_operations myfd_fops = {
+static const struct file_operations myfd_fops = {
 	.owner = THIS_MODULE,
 	.read = &myfd_read,
 	.write = &myfd_write
@@ -54,7 +54,7 @@ const static struct file_operations myfd_fops = {
 static struct miscdevice myfd_device = {
 	.minor = MISC_DYNAMIC_MINOR,
 	.name = "reverse",
-	.fops = &myfd_fops 
+	.fops = &myfd_fops
 };
 
 static int __init myfd_init(void)
