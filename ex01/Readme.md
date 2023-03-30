@@ -1,4 +1,4 @@
-# Exercise 1
+# Exercise 01
 
 Build the module.
 `make`
