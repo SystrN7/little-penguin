@@ -18,13 +18,13 @@ Build the kernel.
 
 Install the kernel.
 `su`
+Install the kernel modules.
+`make modules_install`
 `cp -iv arch/x86/boot/bzImage /boot/vmlinuz-6.3.0-rc3-00012-g17214b70a159`
 Install dubug symbols.
 `cp -iv System.map /boot/System.map-6.3.0-rc3-00012-g17214b70a159`
 Install the kernel config file.
 `cp -iv .config /boot/config-6.3.0-rc3-00012-g17214b70a159`
-Install the kernel modules.
-`make modules_install`
 
 Install docs.
 ```shell
