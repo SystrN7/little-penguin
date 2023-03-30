@@ -2,3 +2,8 @@ resources
 
 *.o
 *.ko
+*.cmd
+*.mod
+*.mod.c
+*.order
+*.symvers
