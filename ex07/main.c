@@ -177,19 +177,3 @@ module_init(module_debugfs_start);
 module_exit(module_debugfs_end);
 
 MODULE_LICENSE("GPL");
-
-
-/*
-The file "id" operates just like it did for assignment 05, use the same logic there,
-the file must be readable and writable by any user.
-
-• The file "jiffies" is to be read only by any user, and when read, should return the
-current value of the jiffies kernel timer.
-
-• The file "foo" needs to be writable only by root, but readable by anyone. When
-writing to it, the value must be stored, up to one page of data. When read, which
-can be done by any user, the value stored in it must be returned. Properly handle
-the fact that someone could be reading from the file while someone else is writing
-to it (oh, a locking hint!)
-
-*/
