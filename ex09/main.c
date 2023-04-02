@@ -17,32 +17,20 @@
 
 // #define BUFFER_SIZE 1024
 
+
+static int mount_add(struct vfsmount *mnt, void *data)
+{
+    pr_info("Mount point: %s\n", mnt->mnt_root->d_name.name);
+    return 0;
+}
+
+
 // Return the list of mounted filesystems
 static ssize_t mymounts_read(struct file *filp, char __user *buffer,
                     size_t count, loff_t *f_pos)
 {
-    struct mnt_namespace *ns = current->nsproxy->mnt_ns;
-    struct mount *mnt;
 
-    char *buf;
-    int len = 0;
-
-    list_for_each_entry(mnt, &ns->list, mnt_list) {
-        len += strlen(mnt->mnt_mountpoint->d_name.name) + 1;
-    }
-
-    buf = kmalloc(len, GFP_KERNEL);
-    if (!buf)
-        return -ENOMEM;
-    
-    list_for_each_entry(mnt, &ns->list, mnt_list) {
-
-        strcat(buf, mnt->mnt_mountpoint->d_name.name);
-        strcat(buf, " ");
-    }
-
-
-
+    iterate_mounts(0, &mount_add, NULL);
     return 0;
 }
 
