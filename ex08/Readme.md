@@ -1,4 +1,4 @@
-# Exercise 8
+# Exercise 08
 
 I you want to see command i use to reformat the code please check the [Ex03 Readme.md](../ex03/Readme.md) file.
 

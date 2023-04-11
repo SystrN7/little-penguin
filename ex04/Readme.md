@@ -358,6 +358,7 @@ to create a rule file
  - [Creating small usb devices drivers](https://embetronicx.com/tutorials/linux/device-drivers/usb-device-driver-example/)
  - [To find how to select the usb keyboard](https://stackoverflow.com/questions/23307579/loading-module-on-keyboard-hotplug)
  - [Install module](https://docs.kernel.org/kbuild/modules.html)
+ - [Udev introduction (French)](https://www.linuxembedded.fr/2015/05/une-introduction-a-udev)
  - [Add usb keyboard to virtual machine](https://superuser.com/questions/144968/dedicated-mouse-and-keyboard-on-virtualbox-vm)
  - [USB Stuff 1](https://www.keil.com/pack/doc/mw/USB/html/_u_s_b__interface__descriptor.html)
  - [USB Stuff 2](https://www.usb.org/sites/default/files/hid1_11.pdf)
