@@ -1,0 +1,169 @@
+Script démarré sur 2023-04-12 09:34:29+02:00 [TERM="linux" TTY="/dev/tty1" COLUMNS="80" LINES="25"]
+[?2004hbash-5.1# make      whoiami     oami 
+[?2004lroot
+[?2004hbash-5.1# make load  
+[?2004linsmod main.ko
+dmesg | tail -1
+[  575.977026] Module loaded
+[?2004hbash-5.1# ls /dev/fortytwo           [1@ [1@-[1@l[1@a /dev/
+[?2004ltotal 4
+drwxr-xr-x 12 root root        2980 12 avril 09:35 .
+drwxr-xr-x 20 root root        4096 14 mars  14:05 ..
+crw-r--r--  1 root root     10, 235 12 avril 09:25 autofs
+drwxr-xr-x  2 root root         300 12 avril 09:25 block
+drwxr-xr-x  2 root root          80 12 avril 09:25 bsg
+drwxr-xr-x  3 root root          60 12 avril 09:25 bus
+lrwxrwxrwx  1 root root           3 12 avril 09:25 cdrom -> sr0
+drwxr-xr-x  2 root root        2660 12 avril 09:35 char
+crw-------  1 root root      5,   1 12 avril 09:25 console
+lrwxrwxrwx  1 root root          11 12 avril 09:25 core -> /proc/kcore
+drwxr-xr-x  3 root root          60 12 avril 09:25 cpu
+crw-------  1 root root     10, 126 12 avril 09:25 cpu_dma_latency
+drwxr-xr-x  6 root root         120 12 avril 09:25 disk
+lrwxrwxrwx  1 root root          13 12 avril 09:25 fd -> /proc/self/fd
+crw-------  1 root root     10, 125 12 avril 09:35 fortytwo
+crw-rw-rw-  1 root root      1,   7 12 avril 09:25 full
+crw-------  1 root root    249,   0 12 avril 09:25 hidraw0
+crw-------  1 root root     10, 228 12 avril 09:25 hpet
+crw-------  1 root root     10, 183 12 avril 09:25 hwrng
+drwxr-xr-x  4 root root         200 12 avril 09:25 input
+crw-r--r--  1 root root      1,  11 12 avril 09:25 kmsg
+brw-rw----  1 root disk      7,   0 12 avril 09:25 loop0
+brw-rw----  1 root disk      7,   1 12 avril 09:25 loop1
+brw-rw----  1 root disk      7,   2 12 avril 09:25 loop2
+brw-rw----  1 root disk      7,   3 12 avril 09:25 loop3
+brw-rw----  1 root disk      7,   4 12 avril 09:25 loop4
+brw-rw----  1 root disk      7,   5 12 avril 09:25 loop5
+brw-rw----  1 root disk      7,   6 12 avril 09:25 loop6
+brw-rw----  1 root disk      7,   7 12 avril 09:25 loop7
+crw-rw----  1 root disk     10, 237 12 avril 09:25 loop-control
+drwxr-xr-x  2 root root          60 12 avril 09:25 mapper
+crw-r-----  1 root kmem      1,   1 12 avril 09:25 mem
+crw-rw-rw-  1 root root      1,   3 12 avril 09:25 null
+crw-------  1 root root     10, 144 12 avril 09:25 nvram
+crw-r-----  1 root kmem      1,   4 12 avril 09:25 port
+crw-rw-rw-  1 root tty       5,   2 12 avril 09:36 ptmx
+drwxr-xr-x  2 root root           0 12 avril 09:25 pts
+crw-rw-rw-  1 root root      1,   8 12 avril 09:25 random
+crw-rw-r--  1 root root     10, 242 12 avril 09:25 rfkill
+lrwxrwxrwx  1 root root           4 12 avril 09:25 rtc -> rtc0
+crw-r--r--  1 root root    254,   0 12 avril 09:25 rtc0
+brw-rw----  1 root disk      8,   0 12 avril 09:25 sda
+brw-rw----  1 root disk      8,   1 12 avril 09:25 sda1
+brw-rw----  1 root disk      8,   2 12 avril 09:25 sda2
+brw-rw----  1 root disk      8,   3 12 avril 09:25 sda3
+crw-rw----  1 root disk     21,   0 12 avril 09:25 sg0
+crw-rw----  1 root cdrom    21,   1 12 avril 09:25 sg1
+lrwxrwxrwx  1 root root           8 12 avril 09:25 shm -> /run/shm
+crw-------  1 root root     10, 231 12 avril 09:25 snapshot
+drwxr-xr-x  2 root root          80 12 avril 09:25 snd
+brw-rw----  1 root cdrom    11,   0 12 avril 09:25 sr0
+lrwxrwxrwx  1 root root          15 12 avril 09:25 stderr -> /proc/self/fd/2
+lrwxrwxrwx  1 root root          15 12 avril 09:25 stdin -> /proc/self/fd/0
+lrwxrwxrwx  1 root root          15 12 avril 09:25 stdout -> /proc/self/fd/1
+crw-rw-rw-  1 root tty       5,   0 12 avril 09:26 tty
+crw--w----  1 root tty       4,   0 12 avril 09:25 tty0
+crw-------  1 root tty       4,   1 12 avril 09:36 tty1
+crw--w----  1 root tty       4,  10 12 avril 09:25 tty10
+crw--w----  1 root tty       4,  11 12 avril 09:25 tty11
+crw--w----  1 root tty       4,  12 12 avril 09:25 tty12
+crw--w----  1 root tty       4,  13 12 avril 09:25 tty13
+crw--w----  1 root tty       4,  14 12 avril 09:25 tty14
+crw--w----  1 root tty       4,  15 12 avril 09:25 tty15
+crw--w----  1 root tty       4,  16 12 avril 09:25 tty16
+crw--w----  1 root tty       4,  17 12 avril 09:25 tty17
+crw--w----  1 root tty       4,  18 12 avril 09:25 tty18
+crw--w----  1 root tty       4,  19 12 avril 09:25 tty19
+crw--w----  1 root tty       4,   2 12 avril 09:25 tty2
+crw--w----  1 root tty       4,  20 12 avril 09:25 tty20
+crw--w----  1 root tty       4,  21 12 avril 09:25 tty21
+crw--w----  1 root tty       4,  22 12 avril 09:25 tty22
+crw--w----  1 root tty       4,  23 12 avril 09:25 tty23
+crw--w----  1 root tty       4,  24 12 avril 09:25 tty24
+crw--w----  1 root tty       4,  25 12 avril 09:25 tty25
+crw--w----  1 root tty       4,  26 12 avril 09:25 tty26
+crw--w----  1 root tty       4,  27 12 avril 09:25 tty27
+crw--w----  1 root tty       4,  28 12 avril 09:25 tty28
+crw--w----  1 root tty       4,  29 12 avril 09:25 tty29
+crw--w----  1 root tty       4,   3 12 avril 09:25 tty3
+crw--w----  1 root tty       4,  30 12 avril 09:25 tty30
+crw--w----  1 root tty       4,  31 12 avril 09:25 tty31
+crw--w----  1 root tty       4,  32 12 avril 09:25 tty32
+crw--w----  1 root tty       4,  33 12 avril 09:25 tty33
+crw--w----  1 root tty       4,  34 12 avril 09:25 tty34
+crw--w----  1 root tty       4,  35 12 avril 09:25 tty35
+crw--w----  1 root tty       4,  36 12 avril 09:25 tty36
+crw--w----  1 root tty       4,  37 12 avril 09:25 tty37
+crw--w----  1 root tty       4,  38 12 avril 09:25 tty38
+crw--w----  1 root tty       4,  39 12 avril 09:25 tty39
+crw--w----  1 root tty       4,   4 12 avril 09:25 tty4
+crw--w----  1 root tty       4,  40 12 avril 09:25 tty40
+crw--w----  1 root tty       4,  41 12 avril 09:25 tty41
+crw--w----  1 root tty       4,  42 12 avril 09:25 tty42
+crw--w----  1 root tty       4,  43 12 avril 09:25 tty43
+crw--w----  1 root tty       4,  44 12 avril 09:25 tty44
+crw--w----  1 root tty       4,  45 12 avril 09:25 tty45
+crw--w----  1 root tty       4,  46 12 avril 09:25 tty46
+crw--w----  1 root tty       4,  47 12 avril 09:25 tty47
+crw--w----  1 root tty       4,  48 12 avril 09:25 tty48
+crw--w----  1 root tty       4,  49 12 avril 09:25 tty49
+crw--w----  1 root tty       4,   5 12 avril 09:25 tty5
+crw--w----  1 root tty       4,  50 12 avril 09:25 tty50
+crw--w----  1 root tty       4,  51 12 avril 09:25 tty51
+crw--w----  1 root tty       4,  52 12 avril 09:25 tty52
+crw--w----  1 root tty       4,  53 12 avril 09:25 tty53
+crw--w----  1 root tty       4,  54 12 avril 09:25 tty54
+crw--w----  1 root tty       4,  55 12 avril 09:25 tty55
+crw--w----  1 root tty       4,  56 12 avril 09:25 tty56
+crw--w----  1 root tty       4,  57 12 avril 09:25 tty57
+crw--w----  1 root tty       4,  58 12 avril 09:25 tty58
+crw--w----  1 root tty       4,  59 12 avril 09:25 tty59
+crw--w----  1 root tty       4,   6 12 avril 09:25 tty6
+crw--w----  1 root tty       4,  60 12 avril 09:25 tty60
+crw--w----  1 root tty       4,  61 12 avril 09:25 tty61
+crw--w----  1 root tty       4,  62 12 avril 09:25 tty62
+crw--w----  1 root tty       4,  63 12 avril 09:25 tty63
+crw--w----  1 root tty       4,   7 12 avril 09:25 tty7
+crw--w----  1 root tty       4,   8 12 avril 09:25 tty8
+crw--w----  1 root tty       4,   9 12 avril 09:25 tty9
+crw-rw----  1 root dialout   4,  64 12 avril 09:25 ttyS0
+crw-rw----  1 root dialout   4,  65 12 avril 09:25 ttyS1
+crw-rw----  1 root dialout   4,  66 12 avril 09:25 ttyS2
+crw-rw----  1 root dialout   4,  67 12 avril 09:25 ttyS3
+crw-rw-rw-  1 root root      1,   9 12 avril 09:25 urandom
+crw-------  1 root root    250,   0 12 avril 09:25 usbmon0
+crw-------  1 root root    250,   1 12 avril 09:25 usbmon1
+crw-rw----  1 root tty       7,   0 12 avril 09:25 vcs
+crw-rw----  1 root tty       7,   1 12 avril 09:25 vcs1
+crw-rw----  1 root tty       7,   2 12 avril 09:25 vcs2
+crw-rw----  1 root tty       7,   3 12 avril 09:25 vcs3
+crw-rw----  1 root tty       7,   4 12 avril 09:25 vcs4
+crw-rw----  1 root tty       7,   5 12 avril 09:25 vcs5
+crw-rw----  1 root tty       7,   6 12 avril 09:25 vcs6
+crw-rw----  1 root tty       7, 128 12 avril 09:25 vcsa
+crw-rw----  1 root tty       7, 129 12 avril 09:25 vcsa1
+crw-rw----  1 root tty       7, 130 12 avril 09:25 vcsa2
+crw-rw----  1 root tty       7, 131 12 avril 09:25 vcsa3
+crw-rw----  1 root tty       7, 132 12 avril 09:25 vcsa4
+crw-rw----  1 root tty       7, 133 12 avril 09:25 vcsa5
+crw-rw----  1 root tty       7, 134 12 avril 09:25 vcsa6
+crw-rw----  1 root tty       7,  64 12 avril 09:25 vcsu
+crw-rw----  1 root tty       7,  65 12 avril 09:25 vcsu1
+crw-rw----  1 root tty       7,  66 12 avril 09:25 vcsu2
+crw-rw----  1 root tty       7,  67 12 avril 09:25 vcsu3
+crw-rw----  1 root tty       7,  68 12 avril 09:25 vcsu4
+crw-rw----  1 root tty       7,  69 12 avril 09:25 vcsu5
+crw-rw----  1 root tty       7,  70 12 avril 09:25 vcsu6
+crw-------  1 root root     10, 127 12 avril 09:25 vga_arbiter
+crw-rw-rw-  1 root root      1,   5 12 avril 09:25 zero
+[?2004hbash-5.1# cat /fort  r   dev/fortytwo 
+[?2004lfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaup^C
+[?2004hbash-5.1# cat /dev/fortytwo at[1P[1P[1P[1@e[1@c[1@h[1@o [1@ [1@"[1@"[1@t[1@e[1@s[1@t" [1@ [1@>
+[?2004lbash: echo: erreur d'écriture : Argument invalide
+[?2004hbash-5.1# echo "test" > /dev/fortytwo [1P[1P[1P[1P[1@f[1@g[1@a[1@l[1@a[1@u[1@p
+[?2004lbash: echo: erreur d'écriture : Argument invalide
+[?2004hbash-5.1# echo "fgalaup" > /dev/fortytwo bash-5.1# echo "[3Ptest" > /dev/fortytwo bash-5.1# echo "[3@fgalaup" > /dev/fortytwo o [1@ [1@-[1@n
+[?2004l[?2004hbash-5.1# echo -n "fgalaup" > /dev/fortytwo                                   exit
+[?2004lexit
+
+Script terminé sur 2023-04-12 09:41:52+02:00 [COMMAND_EXIT_CODE="0"]
