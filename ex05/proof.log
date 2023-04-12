@@ -1,12 +1,15 @@
-Script démarré sur 2023-04-12 09:34:29+02:00 [TERM="linux" TTY="/dev/tty1" COLUMNS="80" LINES="25"]
+Script dï¿½marrï¿½ sur 2023-04-12 09:34:29+02:00 [TERM="linux" TTY="/dev/tty1" COLUMNS="80" LINES="25"]
 [?2004hbash-5.1# make      whoiami     oami 
-[?2004lroot
+[?2004l
+root
 [?2004hbash-5.1# make load  
-[?2004linsmod main.ko
+[?2004l
+insmod main.ko
 dmesg | tail -1
 [  575.977026] Module loaded
 [?2004hbash-5.1# ls /dev/fortytwo           [1@ [1@-[1@l[1@a /dev/
-[?2004ltotal 4
+[?2004l
+total 4
 drwxr-xr-x 12 root root        2980 12 avril 09:35 .
 drwxr-xr-x 20 root root        4096 14 mars  14:05 ..
 crw-r--r--  1 root root     10, 235 12 avril 09:25 autofs
@@ -157,13 +160,20 @@ crw-rw----  1 root tty       7,  70 12 avril 09:25 vcsu6
 crw-------  1 root root     10, 127 12 avril 09:25 vga_arbiter
 crw-rw-rw-  1 root root      1,   5 12 avril 09:25 zero
 [?2004hbash-5.1# cat /fort  r   dev/fortytwo 
-[?2004lfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaupfgalaup^C
+[?2004l
+fgalaupfgalaupfgalaup^C
 [?2004hbash-5.1# cat /dev/fortytwo at[1P[1P[1P[1@e[1@c[1@h[1@o [1@ [1@"[1@"[1@t[1@e[1@s[1@t" [1@ [1@>
-[?2004lbash: echo: erreur d'écriture : Argument invalide
+[?2004l
+bash: echo: erreur d'ï¿½criture : Argument invalide
 [?2004hbash-5.1# echo "test" > /dev/fortytwo [1P[1P[1P[1P[1@f[1@g[1@a[1@l[1@a[1@u[1@p
-[?2004lbash: echo: erreur d'écriture : Argument invalide
-[?2004hbash-5.1# echo "fgalaup" > /dev/fortytwo bash-5.1# echo "[3Ptest" > /dev/fortytwo bash-5.1# echo "[3@fgalaup" > /dev/fortytwo o [1@ [1@-[1@n
-[?2004l[?2004hbash-5.1# echo -n "fgalaup" > /dev/fortytwo                                   exit
-[?2004lexit
+[?2004l
+bash: echo: erreur d'ï¿½criture : Argument invalide
+[?2004hbash-5.1# echo "fgalaup" > /dev/fortytwo 
+bash-5.1# echo "[3Ptest" > /dev/fortytwo 
+bash-5.1# echo "[3@fgalaup" > /dev/fortytwo o [1@ [1@-[1@n
+[?2004l
+[?2004hbash-5.1# echo -n "fgalaup" > /dev/fortytwo                                   exit
+[?2004l
+exit
 
-Script terminé sur 2023-04-12 09:41:52+02:00 [COMMAND_EXIT_CODE="0"]
+Script terminï¿½ sur 2023-04-12 09:41:52+02:00 [COMMAND_EXIT_CODE="0"]

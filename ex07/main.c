@@ -7,17 +7,22 @@
 #include <linux/err.h>          /* Needed for ERR_PTR */
 
 
-#define BUFFER_SIZE 128
+#define BUFFER_SIZE PAGE_SIZE
 
 #define STUDENT_LOGIN "fgalaup"
 #define STUDENT_LOGIN_LENGTH 7
 
 
+// read: user_buffer, read_length, ppos, module_buffer, module_buf_length
+// write: module_buffer, module_buf_length, ppos, user_buffer, write_length
 // ----------------------------
 // File id
 
 // The write buffer
-uint8_t *id_write_buffer;
+char id_write_buffe[PAGE_SIZE];
+uint8_t *foo_write_buffer[PAGE_SIZE];
+size_t foo_write_length = 0;
+
 
 static ssize_t id_write(struct file *file, const char __user *buffer,
                size_t length, loff_t *ppos)
@@ -28,8 +33,11 @@ static ssize_t id_write(struct file *file, const char __user *buffer,
         return (-EINVAL);
     }
 
-    if (copy_from_user(id_write_buffer, buffer, BUFFER_SIZE))
+    if (simple_write_to_buffer(id_write_buffe, PAGE_SIZE, ppos, buffer, length))
+    {
         pr_err("Error while copying from user space.\n");
+        return (-EFAULT);
+    }
 
     if (memcmp(id_write_buffer, STUDENT_LOGIN, STUDENT_LOGIN_LENGTH))
     {
@@ -42,11 +50,7 @@ static ssize_t id_write(struct file *file, const char __user *buffer,
 static ssize_t id_read(struct file *filp, char __user *buffer,
                     size_t count, loff_t *f_pos)
 {
-    size_t length = (count < STUDENT_LOGIN_LENGTH) ? count : STUDENT_LOGIN_LENGTH;
-
-    if (copy_to_user(buffer, STUDENT_LOGIN, length))
-        pr_err("Error while copying to user space.\n");
-    return length;
+   return simple_read_from_buffer(buffer, count, f_pos, STUDENT_LOGIN, STUDENT_LOGIN_LENGTH);
 }
 
 static const struct file_operations id_fops = {
@@ -80,25 +84,21 @@ static const struct file_operations jiffies_fops = {
 // ----------------------------
 // File foo
 
-uint8_t *foo_write_buffer;
-size_t foo_write_length = 0;
-
 static ssize_t foo_write(struct file *file, const char __user *buffer,
                size_t length, loff_t *ppos)
 {
-    foo_write_length = (length > BUFFER_SIZE) ? BUFFER_SIZE : length;
+    int status = 0;
 
-    if (copy_from_user(foo_write_buffer, buffer, foo_write_length))
-        pr_err("Error while copying from user space.\n");
-    return foo_write_length; 
+    status = simple_write_to_buffer(foo_write_buffer, PAGE_SIZE, ppos, buffer, length);
+    if (status > 0)
+        foo_write_length = status;
+    return status;
 }
 
 static ssize_t foo_read(struct file *filp, char __user *buffer,
                     size_t count, loff_t *f_pos)
 {
-    if (copy_to_user(buffer, foo_write_buffer, foo_write_length))
-        pr_err("Error while copying to user space.\n");
-    return 7;
+    return simple_read_from_buffer(buffer, count, f_pos, foo_write_buffer, foo_write_length);
 }
 
 static const struct file_operations foo_fops = {
@@ -108,6 +108,7 @@ static const struct file_operations foo_fops = {
 };
 
 struct dentry *fortytwo_directory;
+
 struct dentry *id_file;
 struct dentry *jiffies_file;
 struct dentry *foo_file;
@@ -142,14 +143,6 @@ static int __init module_debugfs_start(void)
     if (foo_file == ERR_PTR(-ENOMEM))
         goto error;
 
-    id_write_buffer = kmalloc(BUFFER_SIZE, GFP_KERNEL);
-    if (id_write_buffer == NULL)
-        goto error;
-    foo_write_buffer = kmalloc(BUFFER_SIZE, GFP_KERNEL);
-    if (foo_write_buffer == NULL)
-    {
-        kfree(id_write_buffer);
-        goto error;
     }
 
     memset(id_write_buffer, 0, BUFFER_SIZE);
@@ -169,8 +162,6 @@ static void __exit module_debugfs_end(void)
 
     // But now we live in a civilized world, and we can clean up file recursively.
     debugfs_remove_recursive(fortytwo_directory);
-    kfree(id_write_buffer);
-    kfree(foo_write_buffer);
 }
 
 module_init(module_debugfs_start);
