@@ -16,113 +16,195 @@ Result :
 ```
 I: Bus=0019 Vendor=0000 Product=0001 Version=0000
 N: Name="Power Button"
-P: Phys=LNXPWRBN/button/input0
-S: Sysfs=/devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+P: Phys=PNP0C0C/button/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0
 U: Uniq=
-H: Handlers=kbd event0
+H: Handlers=kbd event0 
 B: PROP=0
 B: EV=3
 B: KEY=10000000000000 0
 
 I: Bus=0019 Vendor=0000 Product=0003 Version=0000
 N: Name="Sleep Button"
-P: Phys=LNXSLPBN/button/input0
-S: Sysfs=/devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+P: Phys=PNP0C0E/button/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0E:00/input/input1
 U: Uniq=
-H: Handlers=kbd event1
+H: Handlers=kbd event1 
 B: PROP=0
 B: EV=3
 B: KEY=4000 0 0
 
+I: Bus=0019 Vendor=0000 Product=0001 Version=0000
+N: Name="Power Button"
+P: Phys=LNXPWRBN/button/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXPWRBN:00/input/input2
+U: Uniq=
+H: Handlers=kbd event2 
+B: PROP=0
+B: EV=3
+B: KEY=10000000000000 0
+
 I: Bus=0019 Vendor=0000 Product=0006 Version=0000
 N: Name="Video Bus"
 P: Phys=LNXVIDEO/video/input0
-S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input2
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:01/LNXVIDEO:00/input/input3
 U: Uniq=
-H: Handlers=kbd event2
+H: Handlers=kbd event3 
 B: PROP=0
 B: EV=3
 B: KEY=3e000b00000000 0 0 0
 
-I: Bus=0011 Vendor=0001 Product=0001 Version=ab41
-N: Name="AT Translated Set 2 keyboard"
-P: Phys=isa0060/serio0/input0
-S: Sysfs=/devices/platform/i8042/serio0/input/input3
+I: Bus=0003 Vendor=046a Product=0180 Version=0111
+N: Name="  wired keyboard"
+P: Phys=usb-0000:00:14.0-2/input0
+S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/0003:046A:0180.0001/input/input4
 U: Uniq=
-H: Handlers=sysrq kbd leds event3
+H: Handlers=sysrq kbd event4 leds 
 B: PROP=0
 B: EV=120013
-B: KEY=402000000 3803078f800d001 feffffdfffefffff fffffffffffffffe
+B: KEY=1000000000007 ff9f207ac14057ff febeffdfffefffff fffffffffffffffe
 B: MSC=10
 B: LED=7
 
-I: Bus=0011 Vendor=0002 Product=0006 Version=0000
-N: Name="ImExPS/2 Generic Explorer Mouse"
-P: Phys=isa0060/serio1/input0
-S: Sysfs=/devices/platform/i8042/serio1/input/input5
+I: Bus=0003 Vendor=046a Product=0180 Version=0111
+N: Name="  wired keyboard Consumer Control"
+P: Phys=usb-0000:00:14.0-2/input1
+S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.1/0003:046A:0180.0002/input/input5
 U: Uniq=
-H: Handlers=event4
-B: PROP=1
-B: EV=7
-B: KEY=1f0000 0 0 0 0
-B: REL=143
-
-I: Bus=0003 Vendor=1ea7 Product=0907 Version=0111
-N: Name="SEMITEK USB-HID Gaming Keyboard"
-P: Phys=usb-0000:00:06.0-1/input0
-S: Sysfs=/devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.0/0003:1EA7:0907.0006/input/input15
-U: Uniq=SN0000000001
-H: Handlers=sysrq kbd leds event5
+H: Handlers=kbd event5 
 B: PROP=0
-B: EV=120013
-B: KEY=1000000000007 ff800000000007ff febeffdfffefffff fffffffffffffffe
+B: EV=1f
+B: KEY=3f000307ff 0 0 483ffff17aff32d bfd4444600000000 1 130ff38b17d000 677bfad9415fed 19ed68000004400 10000002
+B: REL=1040
+B: ABS=100000000
 B: MSC=10
-B: LED=7
 
-I: Bus=0003 Vendor=1ea7 Product=0907 Version=0111
-N: Name="SEMITEK USB-HID Gaming Keyboard System Control"
-P: Phys=usb-0000:00:06.0-1/input2
-S: Sysfs=/devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.2/0003:1EA7:0907.0008/input/input16
-U: Uniq=SN0000000001
-H: Handlers=kbd event6
+I: Bus=0003 Vendor=046a Product=0180 Version=0111
+N: Name="  wired keyboard System Control"
+P: Phys=usb-0000:00:14.0-2/input1
+S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.1/0003:046A:0180.0002/input/input6
+U: Uniq=
+H: Handlers=kbd event6 
 B: PROP=0
 B: EV=13
 B: KEY=c000 10000000000000 0
 B: MSC=10
 
-I: Bus=0003 Vendor=1ea7 Product=0907 Version=0111
-N: Name="SEMITEK USB-HID Gaming Keyboard Consumer Control"
-P: Phys=usb-0000:00:06.0-1/input2
-S: Sysfs=/devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.2/0003:1EA7:0907.0008/input/input17
-U: Uniq=SN0000000001
-H: Handlers=kbd event7
-B: PROP=0
-B: EV=13
-B: KEY=2000000 3878d8011001 e000000000000 0
-B: MSC=10
-
-I: Bus=0003 Vendor=1ea7 Product=0907 Version=0111
-N: Name="SEMITEK USB-HID Gaming Keyboard"
-P: Phys=usb-0000:00:06.0-1/input2
-S: Sysfs=/devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.2/0003:1EA7:0907.0008/input/input18
-U: Uniq=SN0000000001
-H: Handlers=sysrq kbd event8
-B: PROP=0
-B: EV=100013
-B: KEY=1000000000007 ff980000000007ff febeffdfffefffff fffffffffffffffe
-B: MSC=10
-
-I: Bus=0003 Vendor=1ea7 Product=0907 Version=0111
-N: Name="SEMITEK USB-HID Gaming Keyboard Mouse"
-P: Phys=usb-0000:00:06.0-1/input2
-S: Sysfs=/devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.2/0003:1EA7:0907.0008/input/input19
-U: Uniq=SN0000000001
-H: Handlers=event9
+I: Bus=0003 Vendor=093a Product=2510 Version=0111
+N: Name="PixArt USB Optical Mouse"
+P: Phys=usb-0000:00:14.0-4/input0
+S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-4/1-4:1.0/0003:093A:2510.0003/input/input7
+U: Uniq=
+H: Handlers=mouse0 event7 
 B: PROP=0
 B: EV=17
-B: KEY=ff0000 0 0 0 0
-B: REL=1943
+B: KEY=70000 0 0 0 0
+B: REL=903
 B: MSC=10
+
+I: Bus=0003 Vendor=05ac Product=8296 Version=0111
+N: Name="Broadcom Corp. Bluetooth USB Host Controller"
+P: Phys=usb-0000:00:14.0-6/input0
+S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-6/1-6:1.0/0003:05AC:8296.0004/input/input8
+U: Uniq=
+H: Handlers=sysrq kbd event8 leds 
+B: PROP=0
+B: EV=120013
+B: KEY=1000000000007 ff800000000007ff febeffdff3cfffff fffffffffffffffe
+B: MSC=10
+B: LED=7
+
+I: Bus=0003 Vendor=05ac Product=8296 Version=0111
+N: Name="Broadcom Corp. Bluetooth USB Host Controller"
+P: Phys=usb-0000:00:14.0-6/input1
+S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-6/1-6:1.1/0003:05AC:8296.0005/input/input9
+U: Uniq=
+H: Handlers=mouse1 event9 
+B: PROP=0
+B: EV=17
+B: KEY=70000 0 0 0 0
+B: REL=3
+B: MSC=10
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA ATI HDMI HDMI/DP,pcm=3"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input10
+U: Uniq=
+H: Handlers=event10 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA ATI HDMI HDMI/DP,pcm=7"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input11
+U: Uniq=
+H: Handlers=event11 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA ATI HDMI HDMI/DP,pcm=8"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input12
+U: Uniq=
+H: Handlers=event12 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA ATI HDMI HDMI/DP,pcm=9"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input13
+U: Uniq=
+H: Handlers=event13 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA ATI HDMI HDMI/DP,pcm=10"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input14
+U: Uniq=
+H: Handlers=event14 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA ATI HDMI HDMI/DP,pcm=11"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input15
+U: Uniq=
+H: Handlers=event15 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA ATI HDMI HDMI/DP,pcm=12"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card1/input16
+U: Uniq=
+H: Handlers=event16 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0003 Vendor=05ac Product=8511 Version=7252
+N: Name="FaceTime HD Camera (Built-in): "
+P: Phys=usb-0000:00:14.0-5/button
+S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-5/1-5:1.0/input/input17
+U: Uniq=
+H: Handlers=kbd event17 
+B: PROP=0
+B: EV=3
+B: KEY=100000 0 0 0
 ```
 
 list devices atributes:
@@ -136,136 +218,133 @@ found, all possible attributes in the udev rules key format.
 A rule to match, can be composed by the attributes of the device
 and the attributes from one single parent device.
 
-  looking at device '/devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.2/0003:1EA7:0907.0008/input/input19':
-    KERNEL=="input19"
+  looking at device '/devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/0003:046A:0180.0001/input/input4':
+    KERNEL=="input4"
     SUBSYSTEM=="input"
     DRIVER==""
-    ATTR{uniq}=="SN0000000001"
-    ATTR{inhibited}=="0"
+    ATTR{uniq}==""
     ATTR{properties}=="0"
-    ATTR{phys}=="usb-0000:00:06.0-1/input2"
-    ATTR{name}=="SEMITEK USB-HID Gaming Keyboard Mouse"
+    ATTR{name}=="  wired keyboard"
+    ATTR{phys}=="usb-0000:00:14.0-2/input0"
 
-  looking at parent device '/devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.2/0003:1EA7:0907.0008':
-    KERNELS=="0003:1EA7:0907.0008"
+  looking at parent device '/devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/0003:046A:0180.0001':
+    KERNELS=="0003:046A:0180.0001"
     SUBSYSTEMS=="hid"
     DRIVERS=="hid-generic"
     ATTRS{country}=="00"
 
-  looking at parent device '/devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.2':
-    KERNELS=="2-1:1.2"
+  looking at parent device '/devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0':
+    KERNELS=="1-2:1.0"
     SUBSYSTEMS=="usb"
     DRIVERS=="usbhid"
-    ATTRS{bAlternateSetting}==" 0"
-    ATTRS{authorized}=="1"
-    ATTRS{bInterfaceSubClass}=="00"
-    ATTRS{bInterfaceNumber}=="02"
-    ATTRS{bInterfaceProtocol}=="00"
-    ATTRS{bInterfaceClass}=="03"
     ATTRS{bNumEndpoints}=="01"
+    ATTRS{authorized}=="1"
+    ATTRS{bInterfaceClass}=="03"
     ATTRS{supports_autosuspend}=="1"
+    ATTRS{bAlternateSetting}==" 0"
+    ATTRS{bInterfaceProtocol}=="01"
+    ATTRS{bInterfaceNumber}=="00"
+    ATTRS{bInterfaceSubClass}=="01"
 
-  looking at parent device '/devices/pci0000:00/0000:00:06.0/usb2/2-1':
-    KERNELS=="2-1"
+  looking at parent device '/devices/pci0000:00/0000:00:14.0/usb1/1-2':
+    KERNELS=="1-2"
     SUBSYSTEMS=="usb"
     DRIVERS=="usb"
+    ATTRS{devpath}=="2"
+    ATTRS{devnum}=="2"
+    ATTRS{bConfigurationValue}=="1"
+    ATTRS{bMaxPacketSize0}=="8"
+    ATTRS{idVendor}=="046a"
+    ATTRS{bNumConfigurations}=="1"
+    ATTRS{bmAttributes}=="a0"
+    ATTRS{rx_lanes}=="1"
+    ATTRS{authorized}=="1"
+    ATTRS{idProduct}=="0180"
+    ATTRS{speed}=="1.5"
+    ATTRS{bDeviceProtocol}=="00"
+    ATTRS{avoid_reset_quirk}=="0"
     ATTRS{configuration}==""
-    ATTRS{bMaxPacketSize0}=="64"
+    ATTRS{product}=="wired keyboard"
+    ATTRS{quirks}=="0x0"
+    ATTRS{version}==" 2.00"
+    ATTRS{manufacturer}==" "
     ATTRS{bDeviceClass}=="00"
-    ATTRS{bcdDevice}=="0300"
-    ATTRS{bNumInterfaces}==" 3"
-    ATTRS{bConfigurationValue}=="1"
-    ATTRS{manufacturer}=="SEMITEK"
-    ATTRS{bNumConfigurations}=="1"
-    ATTRS{authorized}=="1"
-    ATTRS{speed}=="12"
-    ATTRS{idProduct}=="0907"
-    ATTRS{urbnum}=="23"
-    ATTRS{devnum}=="4"
-    ATTRS{product}=="USB-HID Gaming Keyboard"
     ATTRS{maxchild}=="0"
-    ATTRS{bmAttributes}=="80"
-    ATTRS{bDeviceSubClass}=="00"
-    ATTRS{bMaxPower}=="100mA"
-    ATTRS{rx_lanes}=="1"
-    ATTRS{removable}=="unknown"
-    ATTRS{idVendor}=="1ea7"
-    ATTRS{version}==" 1.10"
-    ATTRS{avoid_reset_quirk}=="0"
-    ATTRS{serial}=="SN0000000001"
-    ATTRS{bDeviceProtocol}=="00"
-    ATTRS{tx_lanes}=="1"
     ATTRS{ltm_capable}=="no"
-    ATTRS{devpath}=="1"
-    ATTRS{busnum}=="2"
-    ATTRS{quirks}=="0x0"
+    ATTRS{tx_lanes}=="1"
+    ATTRS{bcdDevice}=="0103"
+    ATTRS{removable}=="removable"
+    ATTRS{busnum}=="1"
+    ATTRS{bNumInterfaces}==" 2"
+    ATTRS{bMaxPower}=="100mA"
+    ATTRS{bDeviceSubClass}=="00"
+    ATTRS{urbnum}=="965"
 
-  looking at parent device '/devices/pci0000:00/0000:00:06.0/usb2':
-    KERNELS=="usb2"
+  looking at parent device '/devices/pci0000:00/0000:00:14.0/usb1':
+    KERNELS=="usb1"
     SUBSYSTEMS=="usb"
     DRIVERS=="usb"
-    ATTRS{configuration}==""
-    ATTRS{bMaxPacketSize0}=="64"
-    ATTRS{bDeviceClass}=="09"
-    ATTRS{bcdDevice}=="0603"
-    ATTRS{bNumInterfaces}==" 1"
-    ATTRS{bConfigurationValue}=="1"
-    ATTRS{manufacturer}=="Linux 6.3.0-thor_kernel-g17214b70a159-dirty ohci_hcd"
-    ATTRS{bNumConfigurations}=="1"
-    ATTRS{authorized}=="1"
-    ATTRS{speed}=="12"
-    ATTRS{idProduct}=="0001"
-    ATTRS{urbnum}=="139"
-    ATTRS{devnum}=="1"
-    ATTRS{product}=="OHCI PCI host controller"
-    ATTRS{maxchild}=="12"
-    ATTRS{bmAttributes}=="e0"
-    ATTRS{bDeviceSubClass}=="00"
-    ATTRS{bMaxPower}=="0mA"
-    ATTRS{rx_lanes}=="1"
-    ATTRS{removable}=="unknown"
-    ATTRS{idVendor}=="1d6b"
-    ATTRS{interface_authorized_default}=="1"
-    ATTRS{authorized_default}=="1"
-    ATTRS{version}==" 1.10"
-    ATTRS{avoid_reset_quirk}=="0"
-    ATTRS{serial}=="0000:00:06.0"
-    ATTRS{bDeviceProtocol}=="00"
-    ATTRS{tx_lanes}=="1"
-    ATTRS{ltm_capable}=="no"
-    ATTRS{devpath}=="0"
-    ATTRS{busnum}=="2"
+    ATTRS{idProduct}=="0002"
     ATTRS{quirks}=="0x0"
+    ATTRS{ltm_capable}=="no"
+    ATTRS{bConfigurationValue}=="1"
+    ATTRS{bcdDevice}=="0504"
+    ATTRS{configuration}==""
+    ATTRS{maxchild}=="16"
+    ATTRS{bMaxPacketSize0}=="64"
+    ATTRS{bDeviceSubClass}=="00"
+    ATTRS{version}==" 2.00"
+    ATTRS{bDeviceClass}=="09"
+    ATTRS{manufacturer}=="Linux 5.4.0-146-generic xhci-hcd"
+    ATTRS{authorized}=="1"
+    ATTRS{urbnum}=="132"
+    ATTRS{tx_lanes}=="1"
+    ATTRS{busnum}=="1"
+    ATTRS{rx_lanes}=="1"
+    ATTRS{idVendor}=="1d6b"
+    ATTRS{serial}=="0000:00:14.0"
+    ATTRS{authorized_default}=="1"
+    ATTRS{avoid_reset_quirk}=="0"
+    ATTRS{bmAttributes}=="e0"
+    ATTRS{product}=="xHCI Host Controller"
+    ATTRS{devnum}=="1"
+    ATTRS{bNumConfigurations}=="1"
+    ATTRS{devpath}=="0"
+    ATTRS{speed}=="480"
+    ATTRS{interface_authorized_default}=="1"
+    ATTRS{removable}=="unknown"
+    ATTRS{bMaxPower}=="0mA"
+    ATTRS{bDeviceProtocol}=="01"
+    ATTRS{bNumInterfaces}==" 1"
 
-  looking at parent device '/devices/pci0000:00/0000:00:06.0':
-    KERNELS=="0000:00:06.0"
+  looking at parent device '/devices/pci0000:00/0000:00:14.0':
+    KERNELS=="0000:00:14.0"
     SUBSYSTEMS=="pci"
-    DRIVERS=="ohci-pci"
-    ATTRS{power_state}=="D0"
-    ATTRS{broken_parity_status}=="0"
-    ATTRS{subsystem_device}=="0x0000"
-    ATTRS{dma_mask_bits}=="32"
-    ATTRS{vendor}=="0x106b"
-    ATTRS{local_cpus}=="1"
-    ATTRS{class}=="0x0c0310"
-    ATTRS{numa_node}=="-1"
+    DRIVERS=="xhci_hcd"
+    ATTRS{subsystem_device}=="0x7270"
+    ATTRS{class}=="0x0c0330"
+    ATTRS{local_cpus}=="f"
     ATTRS{msi_bus}=="1"
-    ATTRS{device}=="0x003f"
-    ATTRS{local_cpulist}=="0"
-    ATTRS{driver_override}=="(null)"
-    ATTRS{d3cold_allowed}=="0"
-    ATTRS{irq}=="22"
-    ATTRS{revision}=="0x00"
-    ATTRS{consistent_dma_mask_bits}=="32"
+    ATTRS{local_cpulist}=="0-3"
+    ATTRS{consistent_dma_mask_bits}=="64"
+    ATTRS{numa_node}=="-1"
+    ATTRS{vendor}=="0x8086"
+    ATTRS{irq}=="36"
+    ATTRS{subsystem_vendor}=="0x8086"
+    ATTRS{broken_parity_status}=="0"
+    ATTRS{d3cold_allowed}=="1"
     ATTRS{ari_enabled}=="0"
+    ATTRS{dma_mask_bits}=="64"
+    ATTRS{revision}=="0x31"
     ATTRS{enable}=="1"
-    ATTRS{subsystem_vendor}=="0x0000"
+    ATTRS{device}=="0xa12f"
+    ATTRS{driver_override}=="(null)"
+    ATTRS{dbc}=="disabled"
 
   looking at parent device '/devices/pci0000:00':
     KERNELS=="pci0000:00"
     SUBSYSTEMS==""
     DRIVERS==""
-    ATTRS{waiting_for_supplier}=="0"
 ```
 
 I find some information i can use to select the usb keyboard.

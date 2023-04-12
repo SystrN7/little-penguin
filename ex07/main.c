@@ -1,10 +1,11 @@
-#include <linux/module.h>       /* Needed by all modules */
 #include <linux/kernel.h>       /* Needed for KERN_INFO */
 #include <linux/init.h>         /* Needed for the macros */
+#include <linux/module.h>       /* Needed by all modules */
 #include <linux/debugfs.h>      /* Needed for debugfs */
 #include <linux/slab.h>         /* Needed for kmalloc */
 #include <linux/jiffies.h>       /* Needed for jiffies */
 #include <linux/err.h>          /* Needed for ERR_PTR */
+#include <linux/uaccess.h>      /* Needed for copy_form_user/copy_to_user */
 
 
 #define BUFFER_SIZE PAGE_SIZE
@@ -19,7 +20,7 @@
 // File id
 
 // The write buffer
-char id_write_buffe[PAGE_SIZE];
+char id_write_buffer[PAGE_SIZE];
 uint8_t *foo_write_buffer[PAGE_SIZE];
 size_t foo_write_length = 0;
 
@@ -33,7 +34,7 @@ static ssize_t id_write(struct file *file, const char __user *buffer,
         return (-EINVAL);
     }
 
-    if (simple_write_to_buffer(id_write_buffe, PAGE_SIZE, ppos, buffer, length))
+    if (simple_write_to_buffer(id_write_buffer, PAGE_SIZE, ppos, buffer, length))
     {
         pr_err("Error while copying from user space.\n");
         return (-EFAULT);
@@ -71,9 +72,7 @@ static ssize_t jiffies_read(struct file *filp, char __user *buffer,
     if (count < sizeof(jiffies_value))
         return -EINVAL;
         
-    if (copy_to_user(buffer, &jiffies_value, sizeof(jiffies_value)))
-        pr_err("Error while copying to user space.\n");
-    return sizeof(jiffies);
+    return copy_to_user(buffer, &jiffies_value, sizeof(jiffies_value));
 }
 
 static const struct file_operations jiffies_fops = {
@@ -143,10 +142,8 @@ static int __init module_debugfs_start(void)
     if (foo_file == ERR_PTR(-ENOMEM))
         goto error;
 
-    }
-
-    memset(id_write_buffer, 0, BUFFER_SIZE);
-    memset(foo_write_buffer, 0, BUFFER_SIZE);
+    memset(id_write_buffer, 0, BUFFER_SIZE * sizeof(uint8_t));
+    memset(foo_write_buffer, 0, BUFFER_SIZE * sizeof(uint8_t));
 
     return (0);
 

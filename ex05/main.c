@@ -28,7 +28,7 @@ static ssize_t fortytwo_write(struct file *file, const char __user *buffer,
         return (-EINVAL);
     }
 
-    if (copy_from_user(write_buffer, buffer, BUFFER_SIZE))
+    if (copy_from_user(write_buffer, buffer, STUDENT_LOGIN_LENGTH))
     {
         pr_err("Error while copying from user space.\n");
         return (-EFAULT);
