@@ -64,15 +64,27 @@ static const struct file_operations id_fops = {
 // ----------------------------
 // File jiffies
 
+
+char    *ft_ulltostr(unsigned long long number, char *buffer, int size)
+{
+    int		i;
+
+    i = size;
+    while (i)
+    {
+        buffer[--i] = (number % 10) + '0';
+        number /= 10;
+    }
+    return (buffer + size - i);
+}
+
 static ssize_t jiffies_read(struct file *filp, char __user *buffer,
                     size_t count, loff_t *f_pos)
 {
-    long unsigned int jiffies_value = jiffies;
+    char jiffies_buffer[20] = {0};
 
-    if (count < sizeof(jiffies_value))
-        return -EINVAL;
-        
-    return copy_to_user(buffer, &jiffies_value, sizeof(jiffies_value));
+    char *jiffies_string = ft_ulltostr(jiffies, jiffies_buffer, 20);
+    return simple_read_from_buffer(buffer, count, f_pos, jiffies_string, 20);
 }
 
 static const struct file_operations jiffies_fops = {
