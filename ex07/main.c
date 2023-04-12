@@ -95,21 +95,30 @@ static const struct file_operations jiffies_fops = {
 // ----------------------------
 // File foo
 
+struct mutex foo_mutex;
+
 static ssize_t foo_write(struct file *file, const char __user *buffer,
                size_t length, loff_t *ppos)
 {
-    int status = 0;
+    ssize_t status = 0;
 
+    mutex_lock(&foo_mutex);
     status = simple_write_to_buffer(foo_write_buffer, PAGE_SIZE, ppos, buffer, length);
     if (status > 0)
         foo_write_length = status;
+    mutex_unlock(&foo_mutex);
     return status;
 }
 
 static ssize_t foo_read(struct file *filp, char __user *buffer,
                     size_t count, loff_t *f_pos)
 {
-    return simple_read_from_buffer(buffer, count, f_pos, foo_write_buffer, foo_write_length);
+    ssize_t status = 0;
+
+    mutex_lock(&foo_mutex);
+    simple_read_from_buffer(buffer, count, f_pos, foo_write_buffer, foo_write_length);
+    mutex_unlock(&foo_mutex);
+    return status;
 }
 
 static const struct file_operations foo_fops = {
@@ -154,6 +163,8 @@ static int __init module_debugfs_start(void)
     if (foo_file == ERR_PTR(-ENOMEM))
         goto error;
 
+    mutex_init(&foo_mutex);
+
     memset(id_write_buffer, 0, BUFFER_SIZE * sizeof(uint8_t));
     memset(foo_write_buffer, 0, BUFFER_SIZE * sizeof(uint8_t));
 
@@ -168,6 +179,8 @@ static int __init module_debugfs_start(void)
 static void __exit module_debugfs_end(void)
 {
     printk(KERN_INFO "Cleaning up module.\n");
+    // Is not strictly necessary, but it's a good practice.
+    mutex_destroy(&foo_mutex);
 
     // But now we live in a civilized world, and we can clean up file recursively.
     debugfs_remove_recursive(fortytwo_directory);
