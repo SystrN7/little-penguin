@@ -20,7 +20,7 @@
 // File id
 
 // The write buffer
-char id_write_buffer[PAGE_SIZE];
+char id_write_buffer[STUDENT_LOGIN_LENGTH];
 uint8_t *foo_write_buffer[PAGE_SIZE];
 size_t foo_write_length = 0;
 
@@ -28,16 +28,18 @@ size_t foo_write_length = 0;
 static ssize_t id_write(struct file *file, const char __user *buffer,
                size_t length, loff_t *ppos)
 {
+    int status = 0;
+
     if (length != STUDENT_LOGIN_LENGTH)
     {
         pr_err("Error: Invalid value\n");
         return (-EINVAL);
     }
 
-    if (simple_write_to_buffer(id_write_buffer, PAGE_SIZE, ppos, buffer, length))
+    if ((status = simple_write_to_buffer(id_write_buffer, STUDENT_LOGIN_LENGTH, ppos, buffer, length)) < 0)
     {
         pr_err("Error while copying from user space.\n");
-        return (-EFAULT);
+        return (status);
     }
 
     if (memcmp(id_write_buffer, STUDENT_LOGIN, STUDENT_LOGIN_LENGTH))
@@ -84,7 +86,7 @@ static ssize_t jiffies_read(struct file *filp, char __user *buffer,
     char jiffies_buffer[20] = {0};
 
     char *jiffies_string = ft_ulltostr(jiffies, jiffies_buffer, 20);
-    return simple_read_from_buffer(buffer, count, f_pos, jiffies_string, 20);
+    return simple_read_from_buffer(buffer, count, f_pos, jiffies_string, 20 - (jiffies_string - jiffies_buffer));
 }
 
 static const struct file_operations jiffies_fops = {
@@ -102,11 +104,15 @@ static ssize_t foo_write(struct file *file, const char __user *buffer,
 {
     ssize_t status = 0;
 
+    pr_info("foo_write 1'\n");
     mutex_lock(&foo_mutex);
+    pr_info("foo_write 2'\n");
     status = simple_write_to_buffer(foo_write_buffer, PAGE_SIZE, ppos, buffer, length);
     if (status > 0)
         foo_write_length = status;
+    pr_info("foo_write 3'\n");
     mutex_unlock(&foo_mutex);
+    pr_info("foo_write 4'\n");
     return status;
 }
 
@@ -115,9 +121,13 @@ static ssize_t foo_read(struct file *filp, char __user *buffer,
 {
     ssize_t status = 0;
 
+    pr_info("foo_read 1'\n");
     mutex_lock(&foo_mutex);
+    pr_info("foo_read 2'\n");
     simple_read_from_buffer(buffer, count, f_pos, foo_write_buffer, foo_write_length);
+    pr_info("foo_read 3'\n");
     mutex_unlock(&foo_mutex);
+    pr_info("foo_read 4'\n");
     return status;
 }
 
