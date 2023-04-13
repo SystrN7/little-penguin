@@ -105,7 +105,6 @@ static ssize_t foo_write(struct file *file, const char __user *buffer,
     ssize_t status = 0;
     loff_t pos = *ppos;
 
-    mutex_lock(&foo_mutex);
 
     if (pos < 0)
         return (-EINVAL);
@@ -114,16 +113,19 @@ static ssize_t foo_write(struct file *file, const char __user *buffer,
     if (length > PAGE_SIZE - pos)
         length = PAGE_SIZE - pos;
     
+    mutex_lock(&foo_mutex);
     status = copy_from_user(
         foo_write_buffer + pos,
         buffer,
         length
     );
+    mutex_unlock(&foo_mutex);
 
-    if (status)
+    if (status < 0)
         return (-EFAULT);
 
-    mutex_unlock(&foo_mutex);
+    *ppos += length;
+
     return status;
 }
 
@@ -133,7 +135,6 @@ static ssize_t foo_read(struct file *filp, char __user *buffer,
     ssize_t status = 0;
     loff_t pos = *f_pos;
 
-    mutex_lock(&foo_mutex);
 
     if (pos < 0)
         return (-EINVAL);
@@ -142,11 +143,11 @@ static ssize_t foo_read(struct file *filp, char __user *buffer,
     if (count > PAGE_SIZE - pos)
         count = PAGE_SIZE - pos;
 
+    mutex_lock(&foo_mutex);
     status = copy_to_user(buffer, foo_write_buffer + pos, count);
-
-    *f_pos += count;
     mutex_unlock(&foo_mutex);
-
+    *f_pos += count;
+    
     return status;
 }
 
