@@ -147,7 +147,7 @@ static ssize_t foo_read(struct file *filp, char __user *buffer,
     status = copy_to_user(buffer, foo_write_buffer + pos, count);
     mutex_unlock(&foo_mutex);
     *f_pos += count;
-    
+
     return status;
 }
 
@@ -205,7 +205,6 @@ static int __init module_debugfs_start(void)
 
     mutex_init(&foo_mutex);
 
-    memset(id_write_buffer, 0, BUFFER_SIZE * sizeof(uint8_t));
     memset(foo_write_buffer, 0, BUFFER_SIZE * sizeof(uint8_t));
 
     return (0);
