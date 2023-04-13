@@ -127,18 +127,34 @@ static ssize_t foo_write(struct file *file, const char __user *buffer,
 	return length;
 }
 
-static ssize_t foo_read(struct file *filp, char __user *buffer,
-					size_t count, loff_t *f_pos)
+static ssize_t foo_read(struct file *filp, char *buffer,
+			     size_t length, loff_t * offset)
 {
-	ssize_t status = 0;
-
-	if (foo_write_buffer == NULL)
-		return 0;
+	int retval;
+	size_t read_size;
 
 	mutex_lock(&foo_mutex);
-	simple_read_from_buffer(buffer, count, f_pos, foo_write_buffer, foo_write_length);
+
+	if (foo_write_buffer == NULL) {
+		mutex_unlock(&foo_mutex);
+		return 0;
+	}
+
+	read_size = (foo_write_length - *offset) >
+	    length ? length : (foo_write_length - *offset);
+
+	retval = copy_to_user(buffer, foo_write_buffer + *offset, read_size);
+
 	mutex_unlock(&foo_mutex);
-	return status;
+
+	if (retval < 0)
+		return retval;
+
+	read_size -= retval;
+
+	*offset += read_size;
+
+	return read_size;
 }
 
 static const struct file_operations foo_fops = {
