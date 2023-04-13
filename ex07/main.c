@@ -20,9 +20,9 @@
 // File id
 
 // The write buffer
-uint8_t id_write_buffer[STUDENT_LOGIN_LENGTH];
-uint8_t *foo_write_buffer = NULL;
-ssize_t foo_write_length = 0;
+static uint8_t id_write_buffer[STUDENT_LOGIN_LENGTH];
+static uint8_t *foo_write_buffer = NULL;
+static ssize_t foo_write_length = 0;
 
 
 static ssize_t id_write(struct file *file, const char __user *buffer,
@@ -102,7 +102,7 @@ DEFINE_MUTEX(foo_mutex);
 static ssize_t foo_write(struct file *file, const char __user *buffer,
 			   size_t length, loff_t *ppos)
 {
-	char *new_foo_buffer = NULL;
+	char *new_foo_buffer;
 
 	if (length > PAGE_SIZE)
 		return -EINVAL;
@@ -131,6 +131,9 @@ static ssize_t foo_read(struct file *filp, char __user *buffer,
 					size_t count, loff_t *f_pos)
 {
 	ssize_t status = 0;
+
+    if (foo_write_buffer == NULL)
+        return 0;
 
 	mutex_lock(&foo_mutex);
 	simple_read_from_buffer(buffer, count, f_pos, foo_write_buffer, foo_write_length);
