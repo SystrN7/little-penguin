@@ -132,8 +132,8 @@ static ssize_t foo_read(struct file *filp, char __user *buffer,
 {
 	ssize_t status = 0;
 
-    if (foo_write_buffer == NULL)
-        return 0;
+	if (foo_write_buffer == NULL)
+		return 0;
 
 	mutex_lock(&foo_mutex);
 	simple_read_from_buffer(buffer, count, f_pos, foo_write_buffer, foo_write_length);
@@ -194,9 +194,6 @@ static int __init module_debugfs_start(void)
 		goto error;
 
 	mutex_init(&foo_mutex);
-
-	memset(foo_write_buffer, 0, BUFFER_SIZE * sizeof(uint8_t));
-
 	return (0);
 
 	error:
