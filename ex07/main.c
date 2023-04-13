@@ -20,8 +20,8 @@
 // File id
 
 // The write buffer
-char id_write_buffer[STUDENT_LOGIN_LENGTH];
-uint8_t *foo_write_buffer[BUFFER_SIZE];
+uint8_t id_write_buffer[STUDENT_LOGIN_LENGTH];
+uint8_t foo_write_buffer[BUFFER_SIZE];
 ssize_t foo_write_length = 0;
 
 
