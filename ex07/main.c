@@ -142,11 +142,11 @@ static ssize_t foo_read(struct file *filp, char __user *buffer,
     if (count > PAGE_SIZE - pos)
         count = PAGE_SIZE - pos;
 
-    status = copy_to_user(buffer, foo_write_buffer + pos, foo_write_length);
+    status = copy_to_user(buffer, foo_write_buffer + pos, count);
 
     *f_pos += count;
     mutex_unlock(&foo_mutex);
-    
+
     return status;
 }
 
