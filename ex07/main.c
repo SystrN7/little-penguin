@@ -70,12 +70,12 @@ char    *ft_ulltostr(unsigned long long number, char *buffer, int size)
     int		i;
 
     i = size;
-    while (i)
+    while (number)
     {
         buffer[--i] = (number % 10) + '0';
         number /= 10;
     }
-    return (buffer + size - i);
+    return (buffer + i);
 }
 
 static ssize_t jiffies_read(struct file *filp, char __user *buffer,
@@ -151,16 +151,26 @@ static int __init module_debugfs_start(void)
         printk(KERN_ERR "Not enough memory to create directory\n");
         return (-1);
     }
+    else if (fortytwo_directory == ERR_PTR(-EEXIST))
+    {
+        printk(KERN_ERR "Directory already exists\n");
+        return (-1);
+    }
+    else if (IS_ERR(fortytwo_directory))
+    {
+        printk(KERN_ERR "Unknown error\n");
+        return (-1);
+    }
 
     // Create a file in debugfs
     id_file = debugfs_create_file("id", 0666, fortytwo_directory, NULL, &id_fops);
-    if (id_file == ERR_PTR(-ENOMEM))
+    if (IS_ERR(id_file))
         goto error;
     jiffies_file = debugfs_create_file("jiffies", 0444, fortytwo_directory, NULL, &jiffies_fops);
-    if (jiffies_file == ERR_PTR(-ENOMEM))
+    if (IS_ERR(jiffies_file))
         goto error;
     foo_file = debugfs_create_file("foo", 0644, fortytwo_directory, NULL, &foo_fops);
-    if (foo_file == ERR_PTR(-ENOMEM))
+    if (IS_ERR(foo_file))
         goto error;
 
     mutex_init(&foo_mutex);
