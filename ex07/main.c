@@ -97,7 +97,7 @@ static const struct file_operations jiffies_fops = {
 // ----------------------------
 // File foo
 
-struct mutex foo_mutex;
+DEFINE_MUTEX(foo_mutex);
 
 static ssize_t foo_write(struct file *file, const char __user *buffer,
                size_t length, loff_t *ppos)
