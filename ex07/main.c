@@ -103,16 +103,27 @@ static ssize_t foo_write(struct file *file, const char __user *buffer,
                size_t length, loff_t *ppos)
 {
     ssize_t status = 0;
+    loff_t pos = *ppos;
 
-    pr_info("foo_write 1'\n");
     mutex_lock(&foo_mutex);
-    pr_info("foo_write 2'\n");
-    status = simple_write_to_buffer(foo_write_buffer, PAGE_SIZE, ppos, buffer, length);
-    if (status > 0)
-        foo_write_length = status;
-    pr_info("foo_write 3'\n");
+
+    if (pos < 0)
+        return (-EINVAL);
+    if (pos >= PAGE_SIZE || !length)
+        return (0);
+    if (length > PAGE_SIZE - pos)
+        length = PAGE_SIZE - pos;
+    
+    status = copy_from_user(
+        foo_write_buffer + pos,
+        buffer,
+        length
+    );
+
+    if (status)
+        return (-EFAULT);
+
     mutex_unlock(&foo_mutex);
-    pr_info("foo_write 4'\n");
     return status;
 }
 
@@ -120,14 +131,22 @@ static ssize_t foo_read(struct file *filp, char __user *buffer,
                     size_t count, loff_t *f_pos)
 {
     ssize_t status = 0;
+    loff_t pos = *f_pos;
 
-    pr_info("foo_read 1'\n");
     mutex_lock(&foo_mutex);
-    pr_info("foo_read 2'\n");
-    simple_read_from_buffer(buffer, count, f_pos, foo_write_buffer, foo_write_length);
-    pr_info("foo_read 3'\n");
+
+    if (pos < 0)
+        return (-EINVAL);
+    if (pos >= PAGE_SIZE)
+        return (0);
+    if (count > PAGE_SIZE - pos)
+        count = PAGE_SIZE - pos;
+
+    status = copy_to_user(buffer, foo_write_buffer + pos, foo_write_length);
+
+    *f_pos += count;
     mutex_unlock(&foo_mutex);
-    pr_info("foo_read 4'\n");
+    
     return status;
 }
 
