@@ -22,25 +22,26 @@ uint8_t *write_buffer;
 static ssize_t fortytwo_write(struct file *file, const char __user *buffer,
                size_t length, loff_t *ppos)
 {
-    if (length != STUDENT_LOGIN_LENGTH)
-    {
-        pr_err("Error: Invalid value\n");
-        return (-EINVAL);
-    }
+	int status = 0;
 
-    if (copy_from_user(write_buffer, buffer, STUDENT_LOGIN_LENGTH))
-    {
-        pr_err("Error while copying from user space.\n");
-        return (-EFAULT);
-    }
-    pr_info("fortytwo misc device write\n");
+	if (length != STUDENT_LOGIN_LENGTH)
+	{
+		pr_err("Error: Invalid value\n");
+		return (-EINVAL);
+	}
 
-    if (memcmp(write_buffer, STUDENT_LOGIN, STUDENT_LOGIN_LENGTH))
-    {
-        pr_err("Error: Invalid value\n");
-        return (-EINVAL);
-    }   
-    return length; 
+	if ((status = simple_write_to_buffer(write_buffer, STUDENT_LOGIN_LENGTH, ppos, buffer, length)) < 0)
+	{
+		pr_err("Error while copying from user space.\n");
+		return (status);
+	}
+
+	if (memcmp(write_buffer, STUDENT_LOGIN, STUDENT_LOGIN_LENGTH))
+	{
+		pr_err("Error: Invalid value\n");
+		return (-EINVAL);
+	}   
+	return length; 
 }
  
 /*
@@ -49,15 +50,7 @@ static ssize_t fortytwo_write(struct file *file, const char __user *buffer,
 static ssize_t fortytwo_read(struct file *filp, char __user *buffer,
                     size_t count, loff_t *f_pos)
 {
-    size_t length = (count < STUDENT_LOGIN_LENGTH) ? count : STUDENT_LOGIN_LENGTH;
-
-    if (copy_to_user(buffer, STUDENT_LOGIN, length))
-    {
-        pr_err("Error while copying to user space.\n");
-        return (-EFAULT);
-    }
-    pr_info("fortytwo misc device read\n");
-    return length;
+    return simple_read_from_buffer(buffer, count, f_pos, STUDENT_LOGIN, STUDENT_LOGIN_LENGTH
 }
 
 /*
