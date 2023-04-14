@@ -161,7 +161,7 @@ crw-------  1 root root     10, 127 12 avril 09:25 vga_arbiter
 crw-rw-rw-  1 root root      1,   5 12 avril 09:25 zero
 [?2004hbash-5.1# cat /fort  r   dev/fortytwo 
 [?2004l
-fgalaupfgalaupfgalaup^C
+fgalaup
 [?2004hbash-5.1# cat /dev/fortytwo at[1P[1P[1P[1@e[1@c[1@h[1@o [1@ [1@"[1@"[1@t[1@e[1@s[1@t" [1@ [1@>
 [?2004l
 bash: echo: erreur d'�criture : Argument invalide
