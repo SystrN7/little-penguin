@@ -50,7 +50,7 @@ static ssize_t fortytwo_write(struct file *file, const char __user *buffer,
 static ssize_t fortytwo_read(struct file *filp, char __user *buffer,
                     size_t count, loff_t *f_pos)
 {
-    return simple_read_from_buffer(buffer, count, f_pos, STUDENT_LOGIN, STUDENT_LOGIN_LENGTH
+    return simple_read_from_buffer(buffer, count, f_pos, STUDENT_LOGIN, STUDENT_LOGIN_LENGTH);
 }
 
 /*
