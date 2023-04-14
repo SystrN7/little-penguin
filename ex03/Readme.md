@@ -13,3 +13,4 @@ To check the code style i use checkpatch.pl script.
  - [clang-format](https://clang.llvm.org/docs/ClangFormat.html)
  - [Submit Checklist](https://kernel.org/doc/html/v6.2/process/submit-checklist.html)
  - [Codding style](https://www.kernel.org/doc/html/v6.2/process/coding-style.html)
+ - [Sleep in kernel](https://docs.kernel.org/timers/timers-howto.html)

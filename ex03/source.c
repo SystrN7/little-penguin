@@ -13,8 +13,8 @@ int do_work(int my_int)
 {
 	int x;
 
-	for (x = 0; x < my_int; ++x)
-		udelay(10);
+	if (my_int > 0)
+		usleep_range((10 * my_int), ( my_int + 1) 10);
 
 	if (my_int < 10)
 		/* That was a long sleep, tell userspace about it */
