@@ -1,88 +1,102 @@
-#include <linux/kernel.h>       /* Needed for KERN_INFO */
-#include <linux/init.h>         /* Needed for the macros */
-#include <linux/module.h>       /* Needed by all modules */
-#include <linux/proc_fs.h>      /* Needed for proc file system */
-#include <linux/mount.h>        /* Needed for mount structure */
-#include <linux/fs.h>           /* Needed for file operations */
-#include <linux/mount.h>        /* Needed for mount */
+// SPDX-License-Identifier: GPL
+#include <linux/fs.h>
+#include <linux/init.h>
+#include <linux/kprobes.h>
+#include <linux/module.h>
+#include <linux/mount.h>
+#include <linux/namei.h>
+#include <linux/proc_fs.h>
+#include <linux/seq_file.h>
 
-#include <linux/seq_file.h>     /* Needed for seq_file */
-#include <linux/fs_struct.h>    /* Needed for fs_struct */
+typedef int (*iterate_mounts_t)(int (*)(struct vfsmount *, void *), void *, struct vfsmount *);
+typedef struct vfsmount *(*collect_mounts_t)(const struct path *);
 
-#include <linux/namei.h>        /* Needed for kern_path */
-
-// https://stackoverflow.com/questions/46591203/get-all-mount-points-in-kernel-module
-
-
-// struct vfsmount {
-// 	struct dentry *mnt_root;	/* root of the mounted tree */
-// 	struct super_block *mnt_sb;	/* pointer to superblock */
-// 	int mnt_flags;
-// 	struct mnt_idmap *mnt_idmap;
-// } __randomize_layout;
-
-
-static int mount_add(struct vfsmount *mount, void *arg)
+static void *mymounts_lookup_symbol(const char *name)
 {
-    struct seq_file *file = arg;
-	struct path mount_path = { .dentry = mount->mnt_root, .mnt = mount };
+	struct kprobe kp = {
+		.symbol_name = name,
+	};
+	void *addr;
 
-	if (mount->mnt_sb->s_op->show_devname)
-		mount->mnt_sb->s_op->show_devname(file, mount->mnt_root);
-	else
-		seq_printf(file, "%s", mount->mnt_sb->s_id);
-	seq_putc(file, '\t');
-	seq_path(file, &mount_path, " \t\n\\");
-	seq_putc(file, '\n');
+	if (register_kprobe(&kp) < 0)
+		return NULL;
 
-    return 0;
+	addr = kp.addr;
+	unregister_kprobe(&kp);
+	return addr;
 }
 
-static int mymounts_show(struct seq_file *file, void *p)
+static int mymounts_show_single(struct vfsmount *mnt, void *ptr)
 {
-    struct path root;
-    struct vfsmount *mounts;
-    int error;
+	struct seq_file *seqf = ptr;
+	struct path mnt_path = {
+		.dentry = mnt->mnt_root, .mnt = mnt
+	};
 
-    error = kern_path("/", 0, &root);
-    if (error)
-        return error;
-    mounts = collect_mounts(&root);
-    if (IS_ERR(mounts))
-        return PTR_ERR(mounts);
+	if (mnt->mnt_sb->s_op->show_devname)
+		mnt->mnt_sb->s_op->show_devname(seqf, mnt->mnt_root);
+	else
+		seq_puts(seqf, mnt->mnt_sb->s_id);
 
-    return iterate_mounts(&mount_add, file, mounts);
+	seq_putc(seqf, '\t');
+	seq_path(seqf, &mnt_path, " \t\n\\");
+	seq_putc(seqf, '\n');
+	return 0;
+}
+
+static int mymounts_show(struct seq_file *seqf, void *unused_ptr)
+{
+	int err;
+	struct path path;
+	struct vfsmount *mnt;
+	iterate_mounts_t iter_mounts_fn;
+	collect_mounts_t coll_mounts_fn;
+
+	(void)unused_ptr;
+	iter_mounts_fn = (iterate_mounts_t)mymounts_lookup_symbol("iterate_mounts");
+	coll_mounts_fn = (collect_mounts_t)mymounts_lookup_symbol("collect_mounts");
+
+	if (iter_mounts_fn == NULL || coll_mounts_fn == NULL)
+		return -1;
+
+	err = kern_path("/", 0, &path);
+	if (err)
+		return err;
+
+	mnt = coll_mounts_fn(&path);
+	if (IS_ERR(mnt))
+		return PTR_ERR(mnt);
+	return iter_mounts_fn(mymounts_show_single, seqf, mnt);
 }
 
 static int mymounts_open(struct inode *inode, struct file *file)
 {
-    return single_open(file, mymounts_show, NULL);
+	return single_open(file, mymounts_show, NULL);
 }
 
-static const struct proc_ops mymounts_fops = {
-    // .owner = THIS_MODULE,
-    .proc_open = &mymounts_open,
-    .proc_read = &seq_read,
+const struct proc_ops mymounts_ops = {
+	.proc_open = mymounts_open,
+	.proc_read = seq_read,
 };
 
-static int __init module_device_mymounts_start(void)
+static struct proc_dir_entry *mymounts_entry;
+
+int ex09_init(void)
 {
-    // int error;
-
-    proc_create("mymounts", 0444, NULL, &mymounts_fops);
-
-
-    printk(KERN_INFO "Module loaded\n");
-    return (0);
+	pr_info("Hello, World!\n");
+	mymounts_entry = proc_create("mymounts", 0444, NULL, &mymounts_ops);
+	if (IS_ERR(mymounts_entry))
+		return PTR_ERR(mymounts_entry);
+	return 0;
 }
 
-static void __exit module_device_mymounts_end(void)
+void ex09_exit(void)
 {
-    printk(KERN_INFO "Cleaning up module.\n");
-    remove_proc_entry("mymounts", NULL);
+	pr_info("Cleaning up module.\n");
+	proc_remove(mymounts_entry);
 }
 
-module_init(module_device_mymounts_start);
-module_exit(module_device_mymounts_end);
+module_init(ex09_init);
+module_exit(ex09_exit);
 
 MODULE_LICENSE("GPL");
