@@ -1,1 +1,1 @@
-ACTION="add", SUBSYSTEMS=="usb", ATTR{bInterfaceProtocol}=="01", RUN+="/sbin/insmod /home/mhouppin/little-penguin/ex04/main.ko"
+ACTION=="add", SUBSYSTEMS=="usb", ATTR{bInterfaceProtocol}=="01", RUN+="/sbin/insmod /home/mhouppin/little-penguin/ex04/main.ko"
